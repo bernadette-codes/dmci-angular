@@ -128,7 +128,7 @@ ul.nav.navbar-nav > li.active > a {
 
 section h2 {
     font-size: 30px;
-    color: #0653a3;
+    color: #01216C;
 }
 
 .properties img, hr {
@@ -270,10 +270,16 @@ footer {
     margin: 0;
 }
 
+footer a,
+footer a:hover {
+    color: #fff;
+}
+
 /* About */
 .dmciSection h2 {
     background: url(img/icons/about.png) 10px 15px/25px no-repeat padding-box;
 }
+
 
 /***** Locations Page *****/
 .makatiProp h2, .mandaluyongProp h2, .manilaProp h2,
@@ -330,36 +336,17 @@ footer {
     text-decoration: none;
 }
 
-
-
-
-
-
-
-
-.contentWidth {
-    padding: 60px 10%;
-}
-
-/* Portfolio White Background */
-.portfolioContent {
-    width: 100%;
-    background-color: #f2f2f2;
-    color: #222;
-    padding: 5%;
-    border: 2px solid #4e4e4e;
+.propName a p {
+    color: #01216C;
+    font-weight: 600;
 }
 
 
 
 
 
-/* Portfolio Thumbnails Description */
-a.portfolioLink {
-    font-size: 25px;
-    font-weight: 800;
-    color: #383838;
-}
+
+
 
 /** Contact Section **/
 /* Contact Form */
@@ -392,35 +379,6 @@ form > button.btn {
     background-color: #383838;
     border-radius: 0;
     margin-top: 15px;
-}
-
-/** Footer Section **/
-
-
-/* Font Styles */
-.bigFontSize {
-    font-size: 1.2em;
-}
-
-.biggerFontSize {
-    font-size: 1.3em;
-}
-
-/* Margin & Padding */
-.top20 {
-    margin-top: 20px;
-}
-
-.top30 {
-    margin-top: 30px;
-}
-
-.top40 {
-    margin-top: 40px;
-}
-
-.bottom30 {
-    margin-bottom: 30px;
 }
 
 /** Media Queries **/
