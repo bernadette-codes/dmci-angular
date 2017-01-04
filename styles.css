@@ -1,0 +1,443 @@
+@charset "utf-8";
+/* CSS Document */
+@import url(https://fonts.googleapis.com/css?family=Quicksand:400,700);
+
+body {
+    position: relative;
+    background-color: #eff2f7;
+    color: #191919;
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+}
+
+/** Scrollspy **/
+nav.affix {
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+/** Landing Page Slides backgrounds **/
+#first-slider .slide1, #first-slider .slide2 {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#first-slider .slide1 {
+    background-image: url(img/landingPage/sienaPark2-paranaque.jpg);
+}
+
+#first-slider .slide2 {
+    background-image: url(img/landingPage/cedarCrest-taguig.jpg);
+}
+
+/** Landing Page **/
+header#first-slider {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+}
+
+#first-slider p {
+    color: #fff;
+    font-size: 40px;
+    font-weight: 600;
+    text-shadow: 3px 3px 5px #01216C;
+}
+
+#first-slider p.last {
+    font-size: 60px;
+}
+
+.carousel-inner .item .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.carousel-fade .carousel-inner .item {
+    -webkit-transition-property: opacity;
+    transition-property: opacity;
+}
+
+.carousel-fade .carousel-inner .item {
+    opacity: 0.4;
+}
+
+.carousel-fade .carousel-inner .active {
+    opacity: 1;
+}
+
+/** Nav Bar **/
+.affix ~ .container-fluid {
+    position: relative;
+    top: 50px;
+}
+
+.navbar.navbar-main {
+    background-color: #01216C;
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    z-index: 9999;
+}
+
+.navbar.navbar-main .wrap1 {
+    position: relative;
+    float: left;
+    left: 50%;
+}
+
+ul.nav.navbar-nav {
+    position: relative;
+    float: left;
+    left: -50%;
+}
+
+ul.nav.navbar-nav li {
+    float: left;
+}
+
+ul.nav.navbar-nav > li > a {
+    float: left;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+ul.nav.navbar-nav > li > a:hover,
+ul.nav.navbar-nav > li > a:active,
+ul.nav.navbar-nav > li > a:focus,
+ul.nav.navbar-nav > li.active > a {
+    background-color: #01216C;
+    color: #66acee;
+}
+
+/* All Pages Styles */
+#first-slider h1,
+.panel-collapse h5 {
+    position: absolute;
+    text-indent: -2000px;
+}
+
+section h2 {
+    font-size: 30px;
+    color: #0653a3;
+}
+
+.properties img, hr {
+    padding: 0;
+    margin: 0;
+}
+
+.propSection, .guideSection, .dmciSection,
+.makatiProp, .mandaluyongProp, .manilaProp,
+.muntinlupaProp, .paranaqueProp, .pasayProp,
+.pasigProp, .quezonCityProp, .taguigProp {
+    background-color: #fff;
+    margin: 5%;
+    padding: 10px;
+}
+
+.propSection h2, .guideSection h2, .dmciSection h2 {
+    padding: 10px 0 0 50px;
+    margin: 20px;
+}
+
+.guideSection h3,
+.guideSection li p:first-child,
+.dmciSection h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #01216C;
+}
+
+.propSection .row,
+.guideSection ol,
+.guideSection .moreInfo {
+    width: 95%;
+    margin: 35px auto 10px;
+}
+
+.moreInfo,
+.info:last-of-type {
+    padding-bottom: 20px;
+}
+
+.guideSection img,
+.dmciSection img {
+    float: right;
+    clear: both;
+    width: 30%;
+    margin: 40px 20px 20px 25px;
+}
+
+/***** Main Page *****/
+
+/* Properties */
+.propSection h2 {
+    background: url(img/icons/condoLogo.png) 0 3px/50px no-repeat padding-box;
+}
+
+.propSection a {
+    text-decoration: none;
+}
+
+.propSection img {
+    margin: 0 auto;
+}
+
+.propSection h3 {
+    background-color: #1F548B;
+    color: #fff;
+    margin: 0 auto 25px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.propSection a:hover h3 {
+    background-color: #01216C;
+}
+
+/* Buyer's Guide */
+.guideSection h2 {
+    background: url(img/icons/listLogo.png) 10px 15px/25px no-repeat padding-box;
+}
+
+.info h3 {
+    padding-top: 20px;
+}
+
+.info p {
+    margin-left: 20px;
+    font-size: 16px;
+}
+
+.moreInfo a,
+.moreInfo a:visited,
+.moreInfo a#financingBtn,
+.moreInfo a#financingBtn:visited {
+    display: block;
+    background: url(img/icons/listLogo.png) 10px 12px/15px no-repeat padding-box;
+    font-size: 18px;
+    font-weight: 600;
+    color: #01216C;
+    text-align: left;
+    margin-left: 20px;
+    padding-left: 35px;
+    text-decoration: none;
+}
+
+.moreInfo a:hover,
+.moreInfo a:focus,
+.moreInfo a:active,
+.moreInfo a#financingBtn:hover,
+.moreInfo a#financingBtn:focus,
+.moreInfo a#financingBtn:active {
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+div.info,
+.moreInfo #cashPayment,
+.moreInfo #financing {
+    width: 90%;
+    margin: 20px auto 10px;
+}
+
+.moreInfo .collapse p:last-child {
+    margin-bottom: 30px;
+}
+
+#financing p.client {
+    font-size: 16px;
+    font-weight: 700;
+    color: #01216C;
+}
+
+/* Footer */
+footer {
+    background-color: #01216C;
+    color: #fff;
+    height: 50px;
+    padding-top: 10px;
+    margin: 0;
+}
+
+/* About */
+.dmciSection h2 {
+    background: url(img/icons/about.png) 10px 15px/25px no-repeat padding-box;
+}
+
+/***** Locations Page *****/
+.makatiProp h2, .mandaluyongProp h2, .manilaProp h2,
+.muntinlupaProp h2, .paranaqueProp h2, .pasayProp h2,
+.pasigProp h2, .quezonCityProp h2, .taguigProp h2 {
+    background: url(img/icons/locationIcon.png) 10px 5px/25px no-repeat padding-box;
+    padding-left: 40px;
+    margin: 20px;
+}
+
+.panel-group.accordion {
+    width: 90%;
+    margin: 25px auto;
+}
+
+.panel-heading a {
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+
+.panel-heading.newProp {
+    background-color: #e69138;
+}
+
+.panel-heading.unCons {
+    background-color: rgba(8,170,87,0.7);
+}
+
+.panel-heading.readOc {
+    background-color: rgba(6,83,163,0.7);
+}
+
+.panel-heading a h4 {
+    padding: 5px 10px;
+}
+
+.panel-body img {
+    display: inline;
+    margin: 20px 20px;
+}
+
+.propName {
+    display: inline-block;
+    border: 2px solid #eff2f7;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.propName a:hover,
+.propName a:focus,
+.propName a:active {
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+.contentWidth {
+    padding: 60px 10%;
+}
+
+/* Portfolio White Background */
+.portfolioContent {
+    width: 100%;
+    background-color: #f2f2f2;
+    color: #222;
+    padding: 5%;
+    border: 2px solid #4e4e4e;
+}
+
+
+
+
+
+/* Portfolio Thumbnails Description */
+a.portfolioLink {
+    font-size: 25px;
+    font-weight: 800;
+    color: #383838;
+}
+
+/** Contact Section **/
+/* Contact Form */
+form .form-control {
+    color: #fff;
+    background-color: #383838;
+    border-radius: 0;
+}
+
+form .form-control:focus {
+    border-color: #666666;
+    box-shadow: none;
+}
+
+.form-control::-webkit-input-placeholder {
+    color: #fff;
+}
+.form-control::-moz-placeholder {
+    color: #fff;
+}
+.form-control:-ms-input-placeholder {
+    color: #fff;
+}
+.form-control:-moz-placeholder {
+    color: #fff;
+}
+
+form > button.btn {
+    color: #fff;
+    background-color: #383838;
+    border-radius: 0;
+    margin-top: 15px;
+}
+
+/** Footer Section **/
+
+
+/* Font Styles */
+.bigFontSize {
+    font-size: 1.2em;
+}
+
+.biggerFontSize {
+    font-size: 1.3em;
+}
+
+/* Margin & Padding */
+.top20 {
+    margin-top: 20px;
+}
+
+.top30 {
+    margin-top: 30px;
+}
+
+.top40 {
+    margin-top: 40px;
+}
+
+.bottom30 {
+    margin-bottom: 30px;
+}
+
+/** Media Queries **/
+@media screen and (max-width: 767px) {
+    /* Nav Bar */
+    ul.nav.navbar-nav {
+       margin: 0;
+    }
+    /* Nav Bar Link */
+    ul.nav.navbar-nav > li > a {
+       padding-top: 15px;
+       padding-bottom: 15px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+   .navbar.navbar-main {
+        letter-spacing: 0;
+   }
+}
