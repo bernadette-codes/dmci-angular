@@ -113,7 +113,6 @@ ul.nav.navbar-nav > li > a {
 
 ul.nav.navbar-nav > li > a:hover,
 ul.nav.navbar-nav > li > a:active,
-ul.nav.navbar-nav > li > a:focus,
 ul.nav.navbar-nav > li.active > a {
     background-color: #01216C;
     color: #66acee;
@@ -121,7 +120,8 @@ ul.nav.navbar-nav > li.active > a {
 
 /* All Pages Styles */
 #first-slider h1,
-.panel-collapse h5 {
+.panel-collapse h5,
+footer h2.invisible {
     position: absolute;
     text-indent: -2000px;
 }
@@ -220,8 +220,10 @@ section h2 {
 }
 
 .moreInfo a,
+.moreInfo a:focus,
 .moreInfo a:visited,
 .moreInfo a#financingBtn,
+.moreInfo a#financingBtn:focus,
 .moreInfo a#financingBtn:visited {
     display: block;
     background: url(img/icons/listLogo.png) 10px 12px/15px no-repeat padding-box;
@@ -235,11 +237,10 @@ section h2 {
 }
 
 .moreInfo a:hover,
-.moreInfo a:focus,
 .moreInfo a:active,
 .moreInfo a#financingBtn:hover,
-.moreInfo a#financingBtn:focus,
 .moreInfo a#financingBtn:active {
+    color: #01216C;
     box-shadow: none;
     text-decoration: underline;
 }
@@ -263,23 +264,54 @@ div.info,
 
 /* Footer */
 footer {
-    background-color: #01216C;
-    color: #fff;
-    height: 50px;
+    background-color: #18345c;
+    color: #eff2f7;
+    height: auto;
     padding-top: 10px;
     margin: 0;
 }
 
+footer .row {
+    margin-bottom: 15px;
+}
+
+footer img {
+    margin: 30px auto 10px;
+}
+
+footer .row p {
+    margin-left: 60px;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer ul.rightLoc {
+    margin-left: -20px;
+}
+
 footer a,
-footer a:hover {
+footer a:visited,
+footer span a:active,
+footer span a:visited {
     color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover,
+footer a:focus,
+footer span a:hover,
+footer span a:focus {
+    color: #fff;
+    border-bottom: 1px solid;
+    text-decoration: none;
 }
 
 /* About */
 .dmciSection h2 {
     background: url(img/icons/about.png) 10px 15px/25px no-repeat padding-box;
 }
-
 
 /***** Locations Page *****/
 .makatiProp h2, .mandaluyongProp h2, .manilaProp h2,
@@ -341,6 +373,50 @@ footer a:hover {
     font-weight: 600;
 }
 
+/** Media Queries **/
+@media screen and (max-width: 992px) {
+    footer .row p {
+        margin-left: 0;
+    }
+
+    footer .last.row {
+        margin-left: -35px;
+    }
+
+    footer ul.rightLoc {
+        margin-left: -10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    footer .row p {
+        text-align: center;
+    }
+
+    footer .last.row {
+        margin-left: 70px;
+    }
+
+    footer ul.rightLoc {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    footer ul.rightLoc {
+        margin-left: -35px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    footer .last.row {
+        margin-left: 50px;
+    }
+
+    footer ul.rightLoc {
+        margin-left: -40px;
+    }
+}
 
 
 
