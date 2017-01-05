@@ -10,6 +10,57 @@ body {
     line-height: 1.8;
 }
 
+
+/** Colors **/
+.navbar.navbar-main,
+ul.nav.navbar-nav > li > a:hover,
+ul.nav.navbar-nav > li > a:active,
+ul.nav.navbar-nav > li.active > a,
+.propSection a:hover h3,
+.propName .infoBtn {
+    background-color: #01216C;
+}
+
+.propSection h3,
+.propName .infoBtn:hover {
+    background-color: #1F548B;
+}
+
+#first-slider p,
+ul.nav.navbar-nav > li > a,
+.propSection h3,
+.panel-heading a,
+.propName .infoBtn,
+footer a,
+footer a:hover,
+footer a:focus,
+footer a:visited,
+footer span a:hover,
+footer span a:focus,
+footer span a:active,
+footer span a:visited {
+    color: #fff;
+}
+
+section h2,
+.guideSection h3,
+.guideSection li p:first-child,
+.dmciSection h3,
+.moreInfo a,
+.moreInfo a:hover,
+.moreInfo a:active,
+.moreInfo a:focus,
+.moreInfo a:visited,
+.moreInfo a#financingBtn,
+.moreInfo a#financingBtn:hover,
+.moreInfo a#financingBtn:active,
+.moreInfo a#financingBtn:focus,
+.moreInfo a#financingBtn:visited,
+#financing p.client,
+.propName a p {
+    color: #01216C;
+}
+
 /** Scrollspy **/
 nav.affix {
     top: 0;
@@ -38,7 +89,6 @@ header#first-slider {
 }
 
 #first-slider p {
-    color: #fff;
     font-size: 40px;
     font-weight: 600;
     text-shadow: 3px 3px 5px #01216C;
@@ -79,7 +129,6 @@ header#first-slider {
 }
 
 .navbar.navbar-main {
-    background-color: #01216C;
     margin: 0;
     border: none;
     border-radius: 0;
@@ -104,7 +153,6 @@ ul.nav.navbar-nav li {
 
 ul.nav.navbar-nav > li > a {
     float: left;
-    color: #fff;
     font-family: 'Open Sans', sans-serif;
     font-size: 15px;
     font-weight: 700;
@@ -114,7 +162,6 @@ ul.nav.navbar-nav > li > a {
 ul.nav.navbar-nav > li > a:hover,
 ul.nav.navbar-nav > li > a:active,
 ul.nav.navbar-nav > li.active > a {
-    background-color: #01216C;
     color: #66acee;
 }
 
@@ -128,7 +175,17 @@ footer h2.invisible {
 
 section h2 {
     font-size: 30px;
-    color: #01216C;
+}
+
+.dmciLogo {
+    position: relative;
+}
+
+.dmciLogo img {
+    float: right;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 .properties img, hr {
@@ -137,9 +194,9 @@ section h2 {
 }
 
 .propSection, .guideSection, .dmciSection,
-.makatiProp, .mandaluyongProp, .manilaProp,
+.lasPinasProp, .makatiProp, .mandaluyongProp,
 .muntinlupaProp, .paranaqueProp, .pasayProp,
-.pasigProp, .quezonCityProp, .taguigProp {
+.pasigProp, .taguigProp {
     background-color: #fff;
     margin: 5%;
     padding: 10px;
@@ -155,7 +212,6 @@ section h2 {
 .dmciSection h3 {
     font-size: 20px;
     font-weight: 700;
-    color: #01216C;
 }
 
 .propSection .row,
@@ -170,8 +226,8 @@ section h2 {
     padding-bottom: 20px;
 }
 
-.guideSection img,
-.dmciSection img {
+.guideSection img.designImg,
+.dmciSection img.designImg {
     float: right;
     clear: both;
     width: 30%;
@@ -194,15 +250,9 @@ section h2 {
 }
 
 .propSection h3 {
-    background-color: #1F548B;
-    color: #fff;
     margin: 0 auto 25px;
     padding-top: 7px;
     padding-bottom: 7px;
-}
-
-.propSection a:hover h3 {
-    background-color: #01216C;
 }
 
 /* Buyer's Guide */
@@ -229,7 +279,6 @@ section h2 {
     background: url(img/icons/listLogo.png) 10px 12px/15px no-repeat padding-box;
     font-size: 18px;
     font-weight: 600;
-    color: #01216C;
     text-align: left;
     margin-left: 20px;
     padding-left: 35px;
@@ -240,7 +289,6 @@ section h2 {
 .moreInfo a:active,
 .moreInfo a#financingBtn:hover,
 .moreInfo a#financingBtn:active {
-    color: #01216C;
     box-shadow: none;
     text-decoration: underline;
 }
@@ -259,7 +307,11 @@ div.info,
 #financing p.client {
     font-size: 16px;
     font-weight: 700;
-    color: #01216C;
+}
+
+/* About */
+.dmciSection h2 {
+    background: url(img/icons/about.png) 10px 15px/25px no-repeat padding-box;
 }
 
 /* Footer */
@@ -295,7 +347,6 @@ footer a,
 footer a:visited,
 footer span a:active,
 footer span a:visited {
-    color: #fff;
     text-decoration: none;
 }
 
@@ -303,20 +354,15 @@ footer a:hover,
 footer a:focus,
 footer span a:hover,
 footer span a:focus {
-    color: #fff;
     border-bottom: 1px solid;
     text-decoration: none;
 }
 
-/* About */
-.dmciSection h2 {
-    background: url(img/icons/about.png) 10px 15px/25px no-repeat padding-box;
-}
-
 /***** Locations Page *****/
-.makatiProp h2, .mandaluyongProp h2, .manilaProp h2,
+.lasPinasProp h2,
+.makatiProp h2, .mandaluyongProp h2,
 .muntinlupaProp h2, .paranaqueProp h2, .pasayProp h2,
-.pasigProp h2, .quezonCityProp h2, .taguigProp h2 {
+.pasigProp h2, .taguigProp h2 {
     background: url(img/icons/locationIcon.png) 10px 5px/25px no-repeat padding-box;
     padding-left: 40px;
     margin: 20px;
@@ -328,7 +374,6 @@ footer span a:focus {
 }
 
 .panel-heading a {
-    color: #fff;
     text-decoration: none;
     letter-spacing: 1px;
     font-size: 18px;
@@ -357,7 +402,7 @@ footer span a:focus {
 
 .propName {
     display: inline-block;
-    border: 2px solid #eff2f7;
+    border: 2px solid #18345c;
     border-radius: 5px;
     margin: 10px;
 }
@@ -368,9 +413,20 @@ footer span a:focus {
     text-decoration: none;
 }
 
-.propName a p {
-    color: #01216C;
+.propName .infoBtn {
+    display: inline-block;
+    float: left;
+    line-height: 18px;
+    font-weight: 700;
+    padding: 10px;
+    margin-left: 25px;
+    border-radius: 5px;
+}
+
+.propName a p.text-left {
+    float: left;
     font-weight: 600;
+    margin: 5px 15px 25px 35px;
 }
 
 /** Media Queries **/
