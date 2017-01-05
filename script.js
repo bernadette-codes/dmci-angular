@@ -13,7 +13,7 @@ $(document).ready(function(){
         $firstAnimatingElems = $myCarousel.find('.item:first').find("[data-animation ^= 'animated']"),
         //Property Locations Width
         $propLocation = $('.propSection h3'),
-        $propImg = $('.propSection img').width();
+        $propImg = $('.propSection .row img').width();
 
     //alert(windowWidth);
 
@@ -25,7 +25,7 @@ $(document).ready(function(){
     $(window).on("resize", function() {
         var windowWidth = $(window).width(),
             windowHeight = $(window).height(),
-            $propImg = $('.propSection img').width();
+            $propImg = $('.propSection .row img').width();
         landing.css({"height": windowHeight-49, "width": windowWidth});
         navBar.attr("data-offset-top", (windowHeight - 52));
         $propLocation.css("width", $propImg);
@@ -61,7 +61,6 @@ $(document).ready(function(){
 
     //Property Locations Width
     $propLocation.css("width", $propImg);
-
 
 
 
