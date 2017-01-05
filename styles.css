@@ -21,6 +21,7 @@ ul.nav.navbar-nav > li.active > a,
     background-color: #01216C;
 }
 
+.modal-header,
 .propSection h3,
 .propName .infoBtn:hover {
     background-color: #1F548B;
@@ -28,6 +29,7 @@ ul.nav.navbar-nav > li.active > a,
 
 #first-slider p,
 ul.nav.navbar-nav > li > a,
+.modal-header,
 .propSection h3,
 .panel-heading a,
 .propName .infoBtn,
@@ -163,6 +165,66 @@ ul.nav.navbar-nav > li > a:hover,
 ul.nav.navbar-nav > li > a:active,
 ul.nav.navbar-nav > li.active > a {
     color: #66acee;
+}
+
+/* Contact Button */
+.call {
+    position: relative;
+}
+
+.call img {
+    position: absolute;
+    top: 80px;
+    right: -15px;
+    border: 3px solid #01216C;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-right: none;
+    animation-name: flicker;
+    -webkit-animation-name: flicker;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+}
+
+.call img:hover {
+    animation-play-state: paused;
+    -webkit-animation-play-state: paused;
+}
+
+@-webkit-keyframes flicker {
+    0%, 100% {opacity: 1;}
+    50% {opacity: 0.3;}
+}
+
+@keyframes flicker {
+    0%, 100% {opacity: 1;}
+    50% {opacity: 0.3;}
+}
+
+@-webkit-keyframes flicker {
+    0%, 100% {opacity: 1;}
+    50% {opacity: 0.3;}
+}
+
+@keyframes flicker {
+    0%, 100% {opacity: 1;}
+    50% {opacity: 0.3;}
+}
+
+.contact {
+    top: 25%;
+}
+
+.modal-header p {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.modal-body p {
+    color: #191919;
+    font-size: 16px;
 }
 
 /* All Pages Styles */
@@ -473,6 +535,14 @@ footer span a:focus {
         margin-left: -40px;
     }
 }
+
+
+
+
+
+
+
+
 
 
 
