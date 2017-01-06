@@ -20,29 +20,8 @@
 
 <body data-spy="scroll" data-target=".navbar" data-offset="60">
 
-<!-- Landing Section -->
 <header id="first-slider">
-
     <h1>DMCI Homes</h1>
-
-    <div id="carousel-generic" class="carousel slide carousel-fade">
-
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner" role="listbox">
-            <!-- Item 1 -->
-            <div class="item active slide1">
-                <div class="container">
-                    <p data-animation="animated bounceInUp">Your dream home can be real...</p>
-                </div>
-            </div>
-            <!-- Item 2 -->
-            <div class="item slide2">
-                <div class="container">
-                    <p data-animation="animated bounceInDown" class="last">Make it happen!</p>
-                </div>
-            </div>
-        </div>
-    </div>
 </header>
 
 <!-- Nav Bar -->
@@ -85,9 +64,9 @@
             <img src="../img/dmci-logo1.jpg" alt="DMCI Logo" class="img-responsive">
         </div>
         <h2 class="text-left">Maricielo Villas</h2>
-        <h3><strong>Address:</strong> Casimiro Avenue, Las Pinas</h3>
+        <h3><strong>Address:</strong>&nbsp; Casimiro Avenue, Las Pinas</h3>
         <hr>
-        <img src="../img/propertiesPhotos/lasPinas-maricieloVillas/1.jpg" alt="Maricielo Villas" class="condoMainImg img-responsive">
+        <img src="../img/propertiesPhotos/lasPinas-maricieloVillas/lapPool.jpg" alt="Maricielo Villas" class="condoMainImg img-responsive">
     </div>
 </section>
 
@@ -197,6 +176,83 @@
         <h3 class="text-left">Facilities</h3>
         <hr>
 
+        <div class="row text-center" id="grid">
+            <div class="col-md-3 col-sm-4 col-xs-6">
+                <img src="../img/propertiesPhotos/lasPinas-maricieloVillas/masterplan.jpg" alt="Master Plan" class="img-responsive" width="200">
+                <h4>Master Plan</h4>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6">
+                <img src="../img/propertiesPhotos/lasPinas-maricieloVillas/clubhouse.jpg" alt="Clubhouse" class="img-responsive" width="200">
+                <h4>Clubhouse</h4>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6">
+                <img src="../img/propertiesPhotos/lasPinas-maricieloVillas/lapPool.jpg" alt="Lap Pool" class="img-responsive" width="200">
+                <h4>Lap Pool</h4>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6">
+                <img src="../img/propertiesPhotos/lasPinas-maricieloVillas/loungeArea.jpg" alt="Lounge Area" class="img-responsive" width="200">
+                <h4>Lounge Area</h4>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6">
+                <img src="../img/propertiesPhotos/lasPinas-maricieloVillas/playgroud.jpg" alt="Playground" class="img-responsive" width="200">
+                <h4>Playground</h4>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6">
+                <img src="../img/propertiesPhotos/lasPinas-maricieloVillas/linearPark.jpg" alt="Linear Park" class="img-responsive" width="200">
+                <h4>Linear Park</h4>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6">
+                <img src="../img/propertiesPhotos/lasPinas-maricieloVillas/fountain.jpg" alt="Fountain" class="img-responsive" width="200">
+                <h4>Fountain</h4>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6">
+                <img src="../img/propertiesPhotos/lasPinas-maricieloVillas/landscapedAtrium.jpg" alt="Landscaped Atrium" class="img-responsive" width="200">
+                <h4>Landscaped Atrium</h4>
+            </div>
+        </div>
+        <div id="overlay"></div>
+        <div id="overlayContent">
+            <img id="imgBig" src="" alt="Maricielo Villas"/>
+        </div>
+
+        <div class="row text-left otherFacility">
+            <div class="col-xs-6">
+                <h5>Other Facilities:</h5>
+                <ul>
+                    <li>Perimeter Fence Pool</li>
+                    <li>Kiddie Pool</li>
+                    <li>Shower Area</li>
+                    <li>Fitness Gym</li>
+                    <li>Function Hall</li>
+                    <li>Game Room</li>
+                    <li>Picnic Grove</li>
+                    <li>Open Lawn</li>
+                    <li>Convenience Store</li>
+                    <li>Laundry Station</li>
+                    <li>24-hour Security</li>
+                    <li>Provision for CCTV Cameras</li>
+                    <li>Water Feature</li>
+                    <li>Standby Electric Generator</li>
+                </ul>
+            </div>
+            <div class="col-xs-6">
+                <h5>Building Features:</h5>
+                <ul>
+                    <li>Landscaped Atriums</li>
+                    <li>Reception Lobby</li>
+                    <li>Parking Space</li>
+                    <li>Passenger Elevators</li>
+                    <li>Mailbox Area</li>
+                    <li>Deck Utility/Service Area</li>
+                    <li>Fire Alarm</li>
+                    <li>Automatic Sprinkler System</li>
+                    <li>Fire Cabinets</li>
+                    <li>Fire Exit</li>
+                    <li>Garbage Rooms</li>
+                    <li>Provision for CCTV</li>
+                </ul>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -211,6 +267,7 @@
         <h3 class="text-left">Location</h3>
         <hr>
 
+        <div id="map" style="height:400px"></div>
     </div>
 </section>
 
@@ -269,8 +326,25 @@
     </small></p>
 </footer>
 
+<script>
+    function myMap() {
+        var myLatLng = {lat: 14.468324, lng: 120.970213},
+            map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 17,
+            center: myLatLng
+            }),
+            marker = new google.maps.Marker({
+                position: myLatLng,
+                map: map,
+                title: 'Maricielo Villas'
+            });
+
+    }
+</script>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
 <script src="../js/script.js"></script>
 
 </body>
