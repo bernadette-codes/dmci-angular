@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="dmci">
 
 <head>
     <meta charset="utf-8">
@@ -15,9 +15,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="http://cdn.bootcss.com/animate.css/3.5.1/animate.min.css">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 </head>
 
-<body data-spy="scroll" data-target=".navbar" data-offset="60">
+<body data-spy="scroll" data-target=".navbar" data-offset="60" ng-controller="propLocController as propLoc">
 
 <header id="first-slider">
     <h1>DMCI Homes</h1>
@@ -34,609 +35,107 @@
     </div>
 </nav>
 
-<!-- Las Pinas Properties -->
-<section id="lasPinasSection" class="container-fluid">
-    <!-- Contact Button-->
-    <div data-target="#contact1" data-toggle="modal" class="call">
-        <img src="img/icons/call.jpg" alt="Contact" width="70" class="img-responsive">
-        <p>contact</p>
-    </div>
-    <div id="contact1" class="modal contact fade" role="dialog">
-        <div class="modal-dialog modal-sm">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <p class="modal-title">Contact</p>
-                </div>
-                <div class="modal-body">
-                    <p class="text-left">
-                        <strong>Landline:</strong>&nbsp; 511-0556, 788-6894<br>
-                        <strong>Globe:</strong>&nbsp; 0927-949-2217<br>
-                        <strong>Sun:</strong>&nbsp; 0933-859-1720
-                    </p>
-                </div>
+<!-- Contact Modal-->
+<div id="contact1" class="modal contact fade" role="dialog">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <p class="modal-title">Contact</p>
+            </div>
+            <div class="modal-body">
+                <p class="text-left">
+                    <strong>Landline:</strong>&nbsp; 511-0556, 788-6894<br>
+                    <strong>Globe:</strong>&nbsp; 0927-949-2217<br>
+                    <strong>Sun:</strong>&nbsp; 0933-859-1720
+                </p>
             </div>
         </div>
     </div>
+</div>
 
-    <div class="lasPinasProp">
-        <div class="dmciLogo">
-            <img src="img/dmci-logo1.jpg" alt="DMCI Logo" class="img-responsive">
-        </div>
-        <h2 class="text-left">Las Piñas Condo</h2>
-        <hr>
-
-        <!-- Accordion -->
-        <div class="panel-group accordion">
-            <!-- Ready Occupancy -->
-            <div class="panel panel-default">
-                <div class="panel-heading readOc">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseLasPinas">
-                        <h4 class="panel-title">Ready Occupancy</h4>
-                    </a>
-                </div>
-                <div id="collapseLasPinas" class="panel-collapse collapse in">
-                    <div class="panel-body text-center">
-                        <h5>Maricielo Villas</h5>
-                        <div class="propName">
-                            <a target="_blank" href="properties/MaricieloVillasLasPinas.html#mainSection">
-                                <img src="img/propertiesName/lasPinas-MaricieloVillas.jpg" alt="Maricielo Villas" class="img-responsive">
-                                <img src="img/propertiesMap/lasPinas-MaricieloVillas.jpg" alt="Maricielo Villas" class="img-responsive"><br>
-                                <p class="infoBtn">More Info</p>
-                                <p class="text-left">Location:&nbsp; Casimiro Avenue, Las Piñas</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Makati Properties -->
-<section id="makatiSection" class="container-fluid">
+<!-- Properties by Cities-->
+<section ng-repeat="propLoc in cityLoc" id="{{propLoc.id}}" class="container-fluid">
     <!-- Contact Button-->
     <div data-target="#contact1" data-toggle="modal" class="call">
         <img src="img/icons/call.jpg" alt="Contact" width="70" class="img-responsive">
         <p>contact</p>
     </div>
 
-    <div class="makatiProp">
+    <div class="cityProp">
         <div class="dmciLogo">
             <img src="img/dmci-logo1.jpg" alt="DMCI Logo" class="img-responsive">
         </div>
-        <h2 class="text-left">Makati Condo</h2>
-        <hr>
-
-        <!-- Accordion -->
-        <div class="panel-group accordion">
-            <!-- Under Construction -->
-            <div class="panel panel-default">
-                <div class="panel-heading unCons">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseMakati">
-                        <h4 class="panel-title">Under Construction</h4>
-                    </a>
-                </div>
-                <div id="collapseMakati" class="panel-collapse collapse in">
-                    <div class="panel-body text-center">
-                        <h5>Brio Tower</h5>
-                        <div class="propName">
-                            <a target="_blank" href="properties/BrioTowerMakati.html#mainSection">
-                                <img src="img/propertiesName/makati-BrioTower.jpg" alt="Brio Tower" class="img-responsive">
-                                <img src="img/propertiesMap/makati-BrioTower.jpg" alt="Brio Tower" class="img-responsive"><br>
-                                <p class="infoBtn">More Info</p>
-                                <p class="text-left">Location:&nbsp; Guadalupe Viejo, Makati City</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Mandaluyong Properties -->
-<section id="mandaluyongSection" class="container-fluid">
-    <!-- Contact Button-->
-    <div data-target="#contact1" data-toggle="modal" class="call">
-        <img src="img/icons/call.jpg" alt="Contact" width="70" class="img-responsive">
-        <p>contact</p>
-    </div>
-
-    <div class="mandaluyongProp">
-        <div class="dmciLogo">
-            <img src="img/dmci-logo1.jpg" alt="DMCI Logo" class="img-responsive">
-        </div>
-        <h2 class="text-left">Mandaluyong Condo</h2>
-        <hr>
-
-        <!-- Accordion -->
-        <div class="panel-group accordion">
-            <!-- Ready Occupancy -->
-            <div class="panel panel-default">
-                <div class="panel-heading readOc">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseMandaluyong">
-                        <h4 class="panel-title">Ready Occupancy</h4>
-                    </a>
-                </div>
-                <div id="collapseMandaluyong" class="panel-collapse collapse in">
-                    <div class="panel-body text-center">
-
-                        <h5>Dansalan Gardens</h5>
-                        <div class="propName">
-                            <a target="_blank" href="properties/DasalanGardensCondoMandaluyong.html#mainSection">
-                                <img src="img/propertiesName/mandaluyong-DansalanGardens.jpg" alt="Dansalan Gardens" class="img-responsive">
-                                <img src="img/propertiesMap/mandaluyong-DansalanGardens.jpg" alt="Dansalan Gardens" class="img-responsive"><br>
-                                <p class="infoBtn">More Info</p>
-                                <p class="text-left">Location:&nbsp; M. Vicente St., Mandaluyong City</p>
-                            </a>
-                        </div>
-
-                        <h5>Flair Towers</h5>
-                        <div class="propName">
-                            <a target="_blank" href="properties/FlairTowersMandaluyong.html#mainSection">
-                                <img src="img/propertiesName/mandaluyong-FlairTowers.jpg" alt="Flair Towers" class="img-responsive">
-                                <img src="img/propertiesMap/mandaluyong-FlairTowers.jpg" alt="Flair Towers" class="img-responsive"><br>
-                                <p class="infoBtn">More Info</p>
-                                <p class="text-left">Location:&nbsp; Reliance St. Corner Pines Highway Hills, Mandaluyong City</p>
-                            </a>
-                        </div>
-
-                        <h5>Tivoli Garden Residences</h5>
-                        <div class="propName">
-                            <a target="_blank" href="properties/TivoliGardenResidencesMandaluyong.html#mainSection">
-                                <img src="img/propertiesName/mandaluyong-TivoliGarden.jpg" alt="Tivoli Garden Residences" class="img-responsive">
-                                <img src="img/propertiesMap/mandaluyong-TivoliGardenResidences.jpg" alt="Tivoli Garden Residences" class="img-responsive"><br>
-                                <p class="infoBtn">More Info</p>
-                                <p class="text-left">Location:&nbsp; Coronoado Street, Brgy. Hulo, Mandaluyong City</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Muntinlupa Properties -->
-<section id="muntinlupaSection" class="container-fluid">
-    <!-- Contact Button-->
-    <div data-target="#contact1" data-toggle="modal" class="call">
-        <img src="img/icons/call.jpg" alt="Contact" width="70" class="img-responsive">
-        <p>contact</p>
-    </div>
-
-    <div class="muntinlupaProp">
-        <div class="dmciLogo">
-            <img src="img/dmci-logo1.jpg" alt="DMCI Logo" class="img-responsive">
-        </div>
-        <h2 class="text-left">Muntinlupa Condo</h2>
-        <hr>
-
-        <!-- Accordion -->
-        <div class="panel-group accordion">
-            <!-- Ready Occupancy -->
-            <div class="panel panel-default">
-                <div class="panel-heading readOc">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseMuntinlupa">
-                        <h4 class="panel-title">Ready Occupancy</h4>
-                    </a>
-                </div>
-                <div id="collapseMuntinlupa" class="panel-collapse collapse in">
-                    <div class="panel-body text-center">
-                        <h5>Rhapsody Residences</h5>
-                        <div class="propName">
-                            <a target="_blank" href="properties/RhapsodyResidencesMuntinlupa.html#mainSection">
-                                <img src="img/propertiesName/muntinlupa-Rhapsody.jpg" alt="Rhapsody Residences" class="img-responsive">
-                                <img src="img/propertiesMap/muntinlupa-Rhapsody.jpg" alt="Rhapsody Residences" class="img-responsive"><br>
-                                <p class="infoBtn">More Info</p>
-                                <p class="text-left">Location:&nbsp; East Service Road, Barrio Cupang, Muntinlupa City</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Paranaque Properties -->
-<section id="paranaqueSection" class="container-fluid">
-    <!-- Contact Button-->
-    <div data-target="#contact1" data-toggle="modal" class="call">
-        <img src="img/icons/call.jpg" alt="Contact" width="70" class="img-responsive">
-        <p>contact</p>
-    </div>
-
-    <div class="paranaqueProp">
-        <div class="dmciLogo">
-            <img src="img/dmci-logo1.jpg" alt="DMCI Logo" class="img-responsive">
-        </div>
-        <h2 class="text-left">Parañaque Condo</h2>
+        <h2 class="text-left">{{propLoc.cityName}} Condo</h2>
         <hr>
 
         <!-- Accordion -->
         <div class="panel-group accordion">
             <!-- New Projects -->
-            <div class="panel panel-default">
+            <div ng-show="propLoc.newProjectsShow" class="panel panel-default">
                 <div class="panel-heading newProp">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse1Paranaque">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#{{propLoc.newProjectscollapse}}">
                         <h4 class="panel-title">New Projects</h4>
                     </a>
                 </div>
-                <div id="collapse1Paranaque" class="panel-collapse collapse in">
+                <div id="{{propLoc.newProjectscollapse}}" class="panel-collapse collapse in">
                     <div class="panel-body text-center">
-                        <h5>Calathea Place</h5>
-                        <div class="propName">
-                            <a target="_blank" href="properties/CalatheaPlaceParanaque.html#mainSection">
-                                <img src="img/propertiesName/paranaque-CalatheaPlace.jpg" alt="Calathea Place" class="img-responsive">
-                                <img src="img/propertiesMap/paranaque-CalatheaPlace.jpg" alt="Calathea Place" class="img-responsive"><br>
-                                <p class="infoBtn">More Info</p>
-                                <p class="text-left">Location:&nbsp; Dr. A. Santos Ave. Parañaque City</p>
-                            </a>
-                        </div>
-
-                        <h5>Oak Harbor Residences</h5>
-                        <div class="propName">
-                            <a target="_blank" href="properties/OakHarborResidencesParanaque.html#mainSection">
-                                <img src="img/propertiesName/paranaque-OakHarbor.jpg" alt="Oak Harbor Residences" class="img-responsive">
-                                <img src="img/propertiesMap/paranaque-OakHarborResidences.jpg" alt="Oak Harbor Residences" class="img-responsive"><br>
-                                <p class="infoBtn">More Info</p>
-                                <p class="text-left">Location:&nbsp; Jackson Ave. Asiaworld City, Brgy. Don Galo, Parañaque City</p>
-                            </a>
+                        <div ng-repeat="np in propLoc.newProjects">
+                            <h5>{{np.propName}}</h5>
+                            <div class="propName">
+                                <a target="_blank" href="{{np.link}}">
+                                    <img ng-src="{{np.namePhoto}}" alt="{{np.propName}}" class="img-responsive">
+                                    <img ng-src="{{np.mapPhoto}}" alt="{{np.propName}}" class="img-responsive"><br>
+                                    <p class="infoBtn">More Info</p>
+                                    <p class="text-left">Location:&nbsp; {{np.address}}</p>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- Under Construction -->
-            <div class="panel panel-default">
+            <div ng-show="propLoc.underConstructionShow" class="panel panel-default">
                 <div class="panel-heading unCons">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse2Paranaque">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#{{propLoc.underConstructioncollapse}}">
                         <h4 class="panel-title">Under Construction</h4>
                     </a>
                 </div>
-                <div id="collapse2Paranaque" class="panel-collapse collapse in">
+                <div id="{{propLoc.underConstructioncollapse}}" class="panel-collapse collapse in">
                     <div class="panel-body text-center">
-                        <h5>Asteria Residences</h5>
-                        <div class="propName">
-                            <a target="_blank" href="properties/AsteriaResidencesParanaque.html#mainSection">
-                                <img src="img/propertiesName/paranaque-AsteriaResidences.jpg" alt="Asteria Residences" class="img-responsive">
-                                <img src="img/propertiesMap/paranaque-AsteriaResidences.jpg" alt="Asteria Residences" class="img-responsive"><br>
-                                <p class="infoBtn">More Info</p>
-                                <p class="text-left">Location:&nbsp; San Pedro Street , San Antonio Valley 2 Brgy San Isidro, Sucat, Parañaque City</p>
-                            </a>
+                        <div ng-repeat="uc in propLoc.underConstruction">
+                            <h5>{{uc.propName}}</h5>
+                            <div class="propName">
+                                <a target="_blank" href="{{uc.link}}">
+                                    <img src="{{uc.namePhoto}}" alt="{{uc.propName}}" class="img-responsive">
+                                    <img src="{{uc.mapPhoto}}" alt="{{uc.propName}}" class="img-responsive"><br>
+                                    <p class="infoBtn">More Info</p>
+                                    <p class="text-left">Location:&nbsp; {{uc.address}}</p>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- Ready Occupancy -->
-            <div class="panel panel-default">
+            <div ng-show="propLoc.readyForOccupancyShow" class="panel panel-default">
                 <div class="panel-heading readOc">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse3Paranaque">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#{{propLoc.readyForOccupancycollapse}}">
                         <h4 class="panel-title">Ready Occupancy</h4>
                     </a>
                 </div>
-                <div id="collapse3Paranaque" class="panel-collapse collapse in">
+                <div id="{{propLoc.readyForOccupancycollapse}}" class="panel-collapse collapse in">
                     <div class="panel-body text-center">
-                        <h5>Arista Place</h5>
-                        <div class="propName">
-                            <a target="_blank" href="properties/AristaPlaceParanaque.html#mainSection">
-                                <img src="img/propertiesName/paranaque-AristaPlace.jpg" alt="Arista Place" class="img-responsive">
-                                <img src="img/propertiesMap/paranaque-AristaPlace.jpg" alt="Arista Place" class="img-responsive"><br>
-                                <p class="infoBtn">More Info</p>
-                                <p class="text-left">Location:&nbsp; JP Rizal St., Brgy. Sto. Niño, Parañaque City</p>
-                            </a>
-                        </div>
-
-                        <h5>Raya Garden</h5>
-                        <div class="propName">
-                            <a target="_blank" href="properties/RayaGardenCondoParanaque.html#mainSection">
-                                <img src="img/propertiesName/paranaque-RayaGarden.jpg" alt="Raya Garden" class="img-responsive">
-                                <img src="img/propertiesMap/paranaque-RayaGarden.jpg" alt="Raya Garden" class="img-responsive"><br>
-                                <p class="infoBtn">More Info</p>
-                                <p class="text-left">Location:&nbsp; West Service Road, Merville, Parañaque City</p>
-                            </a>
-                        </div>
-
-                        <h5>Siena Park Residences</h5>
-                        <div class="propName">
-                            <a target="_blank" href="properties/SienaParkResidencesParanaque.html#mainSection">
-                                <img src="img/propertiesName/paranaque-SienaPark.jpg" alt="Sorrel Residences" class="img-responsive">
-                                <img src="img/propertiesMap/paranaque-SienaParkResidences.jpg" alt="Sorrel Residences" class="img-responsive"><br>
-                                <p class="infoBtn">More Info</p>
-                                <p class="text-left">Location:&nbsp; West Service Road, Sun Valley, Bicutan, Parañaque City</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Pasay Properties -->
-<section id="pasaySection" class="container-fluid">
-    <!-- Contact Button-->
-    <div data-target="#contact1" data-toggle="modal" class="call">
-        <img src="img/icons/call.jpg" alt="Contact" width="70" class="img-responsive">
-        <p>contact</p>
-    </div>
-
-    <div class="pasayProp">
-        <div class="dmciLogo">
-            <img src="img/dmci-logo1.jpg" alt="DMCI Logo" class="img-responsive">
-        </div>
-        <h2 class="text-left">Pasay Condo</h2>
-        <hr>
-
-        <!-- Accordion -->
-        <div class="panel-group accordion">
-            <!-- New Projects -->
-            <div class="panel panel-default">
-                <div class="panel-heading newProp">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse1Pasay">
-                        <h4 class="panel-title">New Projects</h4>
-                    </a>
-                </div>
-                <div id="collapse1Pasay" class="panel-collapse collapse in">
-                    <div class="panel-body text-center">
-                        <h5>Fairway Terraces</h5>
-                        <div class="propName">
-                            <a target="_blank" href="properties/FairwayTerracesPasay.html#mainSection">
-                                <img src="img/propertiesName/pasay-FairwayTerraces.jpg" alt="Fairway Terraces" class="img-responsive">
-                                <img src="img/propertiesMap/pasay-FairwayTerraces.jpg" alt="Fairway Terraces" class="img-responsive"><br>
-                                <p class="infoBtn">More Info</p>
-                                <p class="text-left">Location:&nbsp; Villamor Airbase, Pasay City</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Ready Occupancy -->
-            <div class="panel panel-default">
-                <div class="panel-heading readOc">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse3Pasay">
-                        <h4 class="panel-title">Ready Occupancy</h4>
-                    </a>
-                </div>
-                <div id="collapse3Pasay" class="panel-collapse collapse in">
-                    <div class="panel-body text-center">
-                        <h5>La Verti Residences</h5>
-                        <div class="propName">
-                            <a target="_blank" href="properties/LaVertiResidencesPasay.html#mainSection">
-                                <img src="img/propertiesName/pasay-LaVerti.jpg" alt="La Verti Residences" class="img-responsive">
-                                <img src="img/propertiesMap/pasay-LaVertiResidences.jpg" alt="La Verti Residences" class="img-responsive"><br>
-                                <p class="infoBtn">More Info</p>
-                                <p class="text-left">Location:&nbsp; Taft Avenue, Pasay City</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Pasig Properties -->
-<section id="pasigSection" class="container-fluid">
-    <!-- Contact Button-->
-    <div data-target="#contact1" data-toggle="modal" class="call">
-        <img src="img/icons/call.jpg" alt="Contact" width="70" class="img-responsive">
-        <p>contact</p>
-    </div>
-
-    <div class="pasigProp">
-        <div class="dmciLogo">
-            <img src="img/dmci-logo1.jpg" alt="DMCI Logo" class="img-responsive">
-        </div>
-        <h2 class="text-left">Pasig Condo</h2>
-        <hr>
-
-        <!-- Accordion -->
-        <div class="panel-group accordion">
-            <!-- New Projects -->
-            <div class="panel panel-default">
-                <div class="panel-heading newProp">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse1Pasig">
-                        <h4 class="panel-title">New Projects</h4>
-                    </a>
-                </div>
-                <div id="collapse1Pasig" class="panel-collapse collapse in">
-                    <div class="panel-body text-center">
-                        <h5>Brixton Place</h5>
-                        <div class="propName">
-                            <a target="_blank" href="properties/BrixtonPlacePasig.html#mainSection">
-                                <img src="img/propertiesName/pasig-BrixtonPlace.jpg" alt="Brixton Place" class="img-responsive">
-                                <img src="img/propertiesMap/pasig-BrixtonPlace.jpg" alt="Brixton Place" class="img-responsive"><br>
-                                <p class="infoBtn">More Info</p>
-                                <p class="text-left">Location:&nbsp; 27 Brixton St., Kapitolyo, Pasig City</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Under Construction -->
-            <div class="panel panel-default">
-                <div class="panel-heading unCons">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse2Pasig">
-                        <h4 class="panel-title">Under Construction</h4>
-                    </a>
-                </div>
-                <div id="collapse2Pasig" class="panel-collapse collapse in">
-                    <div class="panel-body text-center">
-                        <h5>Levina Place</h5>
-                        <div class="propName">
-                            <a target="_blank" href="properties/LevinaPlacePasig.html#mainSection">
-                                <img src="img/propertiesName/pasig-LevinaPlace.jpg" alt="Levina Place" class="img-responsive">
-                                <img src="img/propertiesMap/pasig-LevinaPlace.jpg" alt="Levina Place" class="img-responsive"><br>
-                                <p class="infoBtn">More Info</p>
-                                <p class="text-left">Location:&nbsp; Jenny's Ave., Pasig City</p>
-                            </a>
-                        </div>
-
-                        <h5>Lumiere Residences</h5>
-                        <div class="propName">
-                            <a target="_blank" href="properties/LumiereResidencesPasig.html#mainSection">
-                                <img src="img/propertiesName/pasig-LumiereResidences.jpg" alt="Lumiere Residences" class="img-responsive">
-                                <img src="img/propertiesMap/pasig-LumiereResidences.jpg" alt="Lumiere Residences" class="img-responsive"><br>
-                                <p class="infoBtn">More Info</p>
-                                <p class="text-left">Location:&nbsp; Pasig Blvd., cor. Shaw Blvd., Pasig City</p>
-                            </a>
-                        </div>
-
-                        <h5>Mirea Residences</h5>
-                        <div class="propName">
-                            <a target="_blank" href="properties/MireaResidencesPasig.html#mainSection">
-                                <img src="img/propertiesName/pasig-MireaResidences.jpg" alt="Mirea Residences" class="img-responsive">
-                                <img src="img/propertiesMap/pasig-MireaResidences.jpg" alt="Mirea Residences" class="img-responsive"><br>
-                                <p class="infoBtn">More Info</p>
-                                <p class="text-left">Location:&nbsp; Amang Rodriquez Ave., Brgy Santolan, Pasig City</p>
-                            </a>
-                        </div>
-
-                        <h5>Sheridan Towers</h5>
-                        <div class="propName">
-                            <a target="_blank" href="properties/SheridanTowersPasig.html#mainSection">
-                                <img src="img/propertiesName/pasig-SheridanTowers.jpg" alt="Sheridan Towers" class="img-responsive">
-                                <img src="img/propertiesMap/pasig-SheridanTowers.jpg" alt="Sheridan Towers" class="img-responsive"><br>
-                                <p class="infoBtn">More Info</p>
-                                <p class="text-left">Location:&nbsp; Sheridan St., Pasig City</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Ready Occupancy -->
-            <div class="panel panel-default">
-                <div class="panel-heading readOc">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse3Pasig">
-                        <h4 class="panel-title">Ready Occupancy</h4>
-                    </a>
-                </div>
-                <div id="collapse3Pasig" class="panel-collapse collapse in">
-                    <div class="panel-body text-center">
-                        <h5>East Raya Gardens</h5>
-                        <div class="propName">
-                            <a target="_blank" href="properties/EastRayaGardensPasig.html#mainSection">
-                                <img src="img/propertiesName/pasig-EastRayaGardens.jpg" alt="East Raya Gardens" class="img-responsive">
-                                <img src="img/propertiesMap/pasig-EastRayaGardens.jpg" alt="East Raya Gardens" class="img-responsive"><br>
-                                <p class="infoBtn">More Info</p>
-                                <p class="text-left">Location:&nbsp; One Mercedes Avenue, Corner Luis St. Brgy. Mercedes, Pasig City</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Taguig Properties -->
-<section id="taguigSection" class="container-fluid">
-    <!-- Contact Button-->
-    <div data-target="#contact1" data-toggle="modal" class="call">
-        <img src="img/icons/call.jpg" alt="Contact" width="70" class="img-responsive">
-        <p>contact</p>
-    </div>
-
-    <div class="taguigProp">
-        <div class="dmciLogo">
-            <img src="img/dmci-logo1.jpg" alt="DMCI Logo" class="img-responsive">
-        </div>
-        <h2 class="text-left">Taguig Condo</h2>
-        <hr>
-
-        <!-- Accordion -->
-        <div class="panel-group accordion">
-            <!-- New Projects -->
-            <div class="panel panel-default">
-                <div class="panel-heading newProp">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse1Taguig">
-                        <h4 class="panel-title">New Projects</h4>
-                    </a>
-                </div>
-                <div id="collapse1Taguig" class="panel-collapse collapse in">
-                    <div class="panel-body text-center">
-                        <h5>Maple Place</h5>
-                        <div class="propName">
-                            <a target="_blank" href="properties/MaplePlaceTaguig.html#mainSection">
-                                <img src="img/propertiesName/taguig-MaplePlace.jpg" alt="Maple Place" class="img-responsive">
-                                <img src="img/propertiesMap/taguig-MaplePlace.jpg" alt="Maple Place" class="img-responsive"><br>
-                                <p class="infoBtn">More Info</p>
-                                <p class="text-left">Location:&nbsp; Acacia Estates, Taguig City</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Under Construction -->
-            <div class="panel panel-default">
-                <div class="panel-heading unCons">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse2Taguig">
-                        <h4 class="panel-title">Under Construction</h4>
-                    </a>
-                </div>
-                <div id="collapse2Taguig" class="panel-collapse collapse in">
-                    <div class="panel-body text-center">
-                        <h5>Ivory Wood</h5>
-                        <div class="propName">
-                            <a target="_blank" href="properties/IvoryWoodTaguig.html#mainSection">
-                                <img src="img/propertiesName/taguig-Ivorywood.jpg" alt="Ivory Wood" class="img-responsive">
-                                <img src="img/propertiesMap/taguig-IvoryWood.jpg" alt="Ivory Wood" class="img-responsive"><br>
-                                <p class="infoBtn">More Info</p>
-                                <p class="text-left">Location:&nbsp; Acacia Estates, Taguig City</p>
-                            </a>
-                        </div>
-
-                        <h5>The Birchwood</h5>
-                        <div class="propName">
-                            <a target="_blank" href="properties/TheBirchwoodTaguig.html#mainSection">
-                                <img src="img/propertiesName/taguig-TheBirchwood.jpg" alt="The Birchwood" class="img-responsive">
-                                <img src="img/propertiesMap/taguig-TheBirchwood.jpg" alt="The Birchwood" class="img-responsive"><br>
-                                <p class="infoBtn">More Info</p>
-                                <p class="text-left">Location:&nbsp; Acacia Estates, Taguig City</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Ready Occupancy -->
-            <div class="panel panel-default">
-                <div class="panel-heading readOc">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse3Taguig">
-                        <h4 class="panel-title">Ready Occupancy</h4>
-                    </a>
-                </div>
-                <div id="collapse3Taguig" class="panel-collapse collapse in">
-                    <div class="panel-body text-center">
-                        <h5>Cedar Crest</h5>
-                        <div class="propName">
-                            <a target="_blank" href="properties/CedarCrestTaguig.html#mainSection">
-                                <img src="img/propertiesName/taguig-CedarCrest.jpg" alt="Cedar Crest" class="img-responsive">
-                                <img src="img/propertiesMap/taguig-CedarCrest.jpg" alt="Cedar Crest" class="img-responsive"><br>
-                                <p class="infoBtn">More Info</p>
-                                <p class="text-left">Location:&nbsp; Acacia Estates, Taguig City</p>
-                            </a>
-                        </div>
-
-                        <h5>Cypress Tower</h5>
-                        <div class="propName">
-                            <a target="_blank" href="properties/CypressTowersTaguig.html#mainSection">
-                                <img src="img/propertiesName/taguig-CypressTowers.jpg" alt="Cypress Tower" class="img-responsive">
-                                <img src="img/propertiesMap/taguig-CypressTowers.jpg" alt="Cypress Tower" class="img-responsive"><br>
-                                <p class="infoBtn">More Info</p>
-                                <p class="text-left">Location:&nbsp; C5 Corner Diego Silang St., Taguig City</p>
-                            </a>
-                        </div>
-
-                        <h5>Verawood Residences</h5>
-                        <div class="propName">
-                            <a target="_blank" href="properties/VerawoodResidencesTaguig.html#mainSection">
-                                <img src="img/propertiesName/taguig-Verawood.jpg" alt="Verawood Residences" class="img-responsive">
-                                <img src="img/propertiesMap/taguig-VerawoodResidences.jpg" alt="Verawood Residences" class="img-responsive"><br>
-                                <p class="infoBtn">More Info</p>
-                                <p class="text-left">Location:&nbsp; Acacia Estates, Taguig City</p>
-                            </a>
+                        <div ng-repeat="ro in propLoc.readyForOccupancy">
+                            <h5>{{ro.propName}}</h5>
+                            <div class="propName">
+                                <a target="_blank" href="{{ro.link}}">
+                                    <img src="{{ro.namePhoto}}" alt="{{ro.propName}}" class="img-responsive">
+                                    <img src="{{ro.mapPhoto}}" alt="{{ro.propName}}" class="img-responsive"><br>
+                                    <p class="infoBtn">More Info</p>
+                                    <p class="text-left">Location:&nbsp; {{ro.address}}</p>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -703,6 +202,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src="js/script.js"></script>
+<!-- AngularJS App -->
+<script src="js/app.js"></script>
 
 </body>
 
