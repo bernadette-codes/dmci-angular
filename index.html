@@ -86,11 +86,11 @@
         </div>
         <h2 class="text-left">PROPERTIES</h2>
         <hr>
-        <div ng-controller="locationsController as location" class="row text-center mainPage">
-            <div ng-repeat="location in cities" class="col-md-3 col-sm-4 col-xs-6">
-                <a href="{{location.link}}">
-                    <img ng-src="{{location.photo}}" alt="{{location.cityName}}" class="img-responsive" width="200" height="180">
-                    <h3>{{location.cityName}}</h3>
+        <div ng-controller="propLocController as propLoc" class="row text-center mainPage">
+            <div ng-repeat="propLoc in cityLoc" class="col-md-3 col-sm-4 col-xs-6">
+                <a href="{{propLoc.link}}">
+                    <img ng-src="{{propLoc.photo}}" alt="{{propLoc.cityName}}" class="img-responsive" width="200" height="180">
+                    <h3>{{propLoc.cityName}}</h3>
                 </a>
             </div>
         </div>
@@ -198,7 +198,6 @@
                 <p>{{about.description}}</p>
                 <ul>
                     <li ng-repeat="x in about.more">{{x}}</li>
-
                 </ul>
             </div>
         </div>
