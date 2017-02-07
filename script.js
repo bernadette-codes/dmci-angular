@@ -6,30 +6,57 @@ document.getElementById("year").innerHTML = n;
 $(document).ready(function(){
     var windowWidth = $(window).width(),
         windowHeight = $(window).height(),
-        landing = $("#first-slider .carousel .item"),
-        navBar = $(".navbar.navbar-main"),
+        $landing = $("#first-slider .carousel .item"),
+        $navBar = $("#navMain.navbar.navbar-main"),
         //Variables on page load
         $myCarousel = $('#carousel-generic'),
         $firstAnimatingElems = $myCarousel.find('.item:first').find("[data-animation ^= 'animated']"),
-        //Property Locations Width
-        $propLocation = $('.propSection h3'),
-        $propImg = $('.propSection .row img').width();
+        //Property City Names Width
+        $propLocation = $('.propSection .mainPage h3'),
+        $propImg = $('.propSection .row img').width(),
+        //Condo Main Photo Width
+        $condoMainImg = $('.condoMainImg'),
+        $propWidth = $('.propSection').width(),
+        //Facilities Photo Name Width
+        $facilityNameWidth = $('#facilitiesSection h4'),
+        $facilitiesImg = $('#facilitiesSection .row img').width(),
+        //Zoom-in Photos
+        $imgBig = $("#imgBig"),
+        $overlay = $("#overlay"),
+        $overlayContent = $("#overlayContent"),
+        //Google Map
+        $googleMap = $('#map');
 
     //alert(windowWidth);
 
-    //Landing Page Size
-    landing.css("height",(windowHeight - 49));
-    navBar.attr("data-offset-top",(windowHeight - 52));
-
-    //Landing Page on Resize
+    //Page on Resize
     $(window).on("resize", function() {
         var windowWidth = $(window).width(),
             windowHeight = $(window).height(),
-            $propImg = $('.propSection .row img').width();
-        landing.css({"height": windowHeight-49, "width": windowWidth});
-        navBar.attr("data-offset-top", (windowHeight - 52));
+            //Property City Names Width
+            $propImg = $('.propSection .row img').width(),
+            //Condo Main Photo Width
+            $propWidth = $('.propSection').width(),
+            //Facilities Photo Name Width
+            $facilitiesImg = $('#facilitiesSection .row img').width(),
+            //Google Map
+            $googleMap = $('#map');
+
+        $landing.css({"height": windowHeight-49, "width": windowWidth});
+        $navBar.attr("data-offset-top", (windowHeight - 52));
+        //Property City Names Width
         $propLocation.css("width", $propImg);
+        //Condo Main Photo Width
+        $condoMainImg.css("width", $propWidth-70);
+        //Facilities Photo Name Width
+        $facilityNameWidth.css("width", $facilitiesImg+4);
+        //Google Map
+        $googleMap.css("width", $propWidth-70);
     });
+
+    //Landing Page Size
+    $landing.css("height",(windowHeight - 49));
+    $navBar.attr("data-offset-top",(windowHeight - 52));
 
     // Landing Page Slides backgrounds
         //Function to animate slider captions
@@ -59,25 +86,30 @@ $(document).ready(function(){
         $('#carousel-generic').carousel({interval: 0});
     // End of Landing Page Slides backgrounds
 
-    //Property Locations Width
+    //Property City Names Width
     $propLocation.css("width", $propImg);
 
+    //Condo Main Photo Width
+    $condoMainImg.css("width", $propWidth-70);
 
+    //Facilities Photo Name Width
+    $facilityNameWidth.css("width", $facilitiesImg+4);
 
-
-
-    //Contact Section Size
-    /*
-    $("#contactSection").css("height",(windowHeight - 109));
-
-    //Contact Section on Resize
-    $(window).on("resize", function() {
-        $("#contactSection").css("height", (windowHeight - 109));
+    //Zoom-in Photos
+    $("#grid img").click(function(){
+        $imgBig.attr("src",$(this).prop('src'));
+        $overlay.show(350);
+        $overlayContent.show(350);
     });
-    */
+
+    // Hide Bigger Photos
+    $imgBig.click(function(){
+        $(this).attr("src", "");
+        $overlay.hide();
+        $overlayContent.hide();
+    });
+
+    //Google Map
+    $googleMap.css("width", $propWidth-70);
 
 }); // end ready
-
-
-
-
