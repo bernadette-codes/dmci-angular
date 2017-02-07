@@ -56,16 +56,10 @@
 
 <!-- Properties by Cities-->
 <section ng-repeat="propLoc in cityLoc" id="{{propLoc.id}}" class="container-fluid">
-    <!-- Contact Button-->
-    <div data-target="#contact1" data-toggle="modal" class="call">
-        <img src="img/icons/call.jpg" alt="Contact" width="70" class="img-responsive">
-        <p>contact</p>
-    </div>
+    <div contact-button></div>
 
     <div class="cityProp">
-        <div class="dmciLogo">
-            <img src="img/dmci-logo1.jpg" alt="DMCI Logo" class="img-responsive">
-        </div>
+        <div dmci-logo></div>
         <h2 class="text-left">{{propLoc.cityName}} Condo</h2>
         <hr>
 
