@@ -30,11 +30,8 @@ ul.nav.navbar-nav > li.active > a,
     background-color: #1F548B;
 }
 
-.propSection, .guideSection, .dmciSection,
-.lasPinasProp, .makatiProp, .mandaluyongProp,
-.muntinlupaProp, .paranaqueProp, .pasayProp,
-.pasigProp, .taguigProp,                                                                                                                /*delete makatiProp and the likes*/
-.cityProp,
+.propSection, .guideSection,
+.dmciSection, .cityProp,
 #mainSection h3,
 #unitsSection h3,
 #facilitiesSection h3,
@@ -301,10 +298,7 @@ section h2,
 }
 
 .propSection, .guideSection,
-.dmciSection, .cityProp,
-.lasPinasProp, .makatiProp, .mandaluyongProp,
-.muntinlupaProp, .paranaqueProp, .pasayProp,
-.pasigProp, .taguigProp {
+.dmciSection, .cityProp {
     margin: 5%;
     padding: 10px;
 }
@@ -474,10 +468,6 @@ footer span a:focus {
 }
 
 /***** Locations Page *****/
-.lasPinasProp h2, .makatiProp h2,
-.mandaluyongProp h2, .muntinlupaProp h2,
-.paranaqueProp h2, .pasayProp h2,
-.pasigProp h2, .taguigProp h2,
 .cityProp h2,
 #locationSection h3 {
     background: url(img/icons/locationIcon.png) 10px 5px/25px no-repeat padding-box;
@@ -733,10 +723,6 @@ section#locationSection {
     img[src$="condoImg/gym.jpg"] {
         display: none;
     }
-    .lasPinasProp h2, .makatiProp h2,
-    .mandaluyongProp h2, .muntinlupaProp h2,
-    .paranaqueProp h2, .pasayProp h2,
-    .pasigProp h2, .taguigProp h2,
     .cityProp h2 {
         font-size: 26px;
     }
@@ -907,10 +893,6 @@ section#locationSection {
     .dmciSection h2 {
         background: url(img/icons/about.png) 10px 15px/20px no-repeat padding-box;
     }
-    .lasPinasProp h2, .makatiProp h2,
-    .mandaluyongProp h2, .muntinlupaProp h2,
-    .paranaqueProp h2, .pasayProp h2,
-    .pasigProp h2, .taguigProp h2,
     .cityProp h2,
     #locationSection h3 {
         background: url(img/icons/locationIcon.png) 10px 5px/20px no-repeat padding-box;
