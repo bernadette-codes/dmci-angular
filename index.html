@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>DMCI Homes | Real Estate Philippines, Condo, House & Lot for Sale</title>
+    <title>DMCI Homes | Real Estate Philippines, Condo, House and Lot for Sale</title>
     <meta name="description" content="The website of DMCI Homes where you can buy prime house and lots, real estate properties, apartments & condos for sale in the Philippines.">
     <meta name="keywords" content="DMCI, DMCI Condo, Condo Manila, Condo Philippines, Condo for sale, Las Pinas Condo, Makati Condo, Mandaluyong Condo, Muntinlupa Condo, Paranaque Condo, Pasay Condo, Pasig Condo, Taguig Condo">
     <meta name="author" content="Bernadette Engleman">
@@ -55,35 +55,31 @@
     </div>
 </nav>
 
-<!-- Properties Section -->
-<section id="propertiesSection" class="container-fluid">
-    <!-- Contact Button-->
-    <div data-target="#contact1" data-toggle="modal" class="call">
-        <img src="img/icons/call.jpg" alt="Contact" width="70" class="img-responsive">
-        <p>contact</p>
-    </div>
-    <div id="contact1" class="modal contact fade" role="dialog">
-        <div class="modal-dialog modal-sm">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <p class="modal-title">Contact</p>
-                </div>
-                <div class="modal-body">
-                    <p class="text-left">
-                        <strong>Landline:</strong>&nbsp; 511-0556, 788-6894<br>
-                        <strong>Globe:</strong>&nbsp; 0927-949-2217<br>
-                        <strong>Sun:</strong>&nbsp; 0933-859-1720
-                    </p>
-                </div>
+<!-- Contact Modal-->
+<div id="contact1" class="modal contact fade" role="dialog">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <p class="modal-title">Contact</p>
+            </div>
+            <div class="modal-body">
+                <p class="text-left">
+                    <strong>Landline:</strong>&nbsp; 511-0556, 788-6894<br>
+                    <strong>Globe:</strong>&nbsp; 0927-949-2217<br>
+                    <strong>Sun:</strong>&nbsp; 0933-859-1720
+                </p>
             </div>
         </div>
     </div>
+</div>
+
+<!-- Properties Section -->
+<section id="propertiesSection" class="container-fluid">
+    <div contact-button></div>
 
     <div class="propSection">
-        <div class="dmciLogo">
-            <img src="img/dmci-logo1.jpg" alt="DMCI Logo" class="img-responsive">
-        </div>
+        <div dmci-logo></div>
         <h2 class="text-left">PROPERTIES</h2>
         <hr>
         <div ng-controller="propLocController as propLoc" class="row text-center mainPage">
@@ -99,16 +95,10 @@
 
 <!-- Buyers Guide Section -->
 <section id="buyersGuideSection" class="container-fluid">
-    <!-- Contact Button-->
-    <div data-target="#contact1" data-toggle="modal" class="call">
-        <img src="img/icons/call.jpg" alt="Contact" width="70" class="img-responsive">
-        <p>contact</p>
-    </div>
+    <div contact-button></div>
 
     <div ng-controller="buyersGuideController as buyersGuide" class="guideSection">
-        <div class="dmciLogo">
-            <img src="img/dmci-logo1.jpg" alt="DMCI Logo" class="img-responsive">
-        </div>
+        <div dmci-logo></div>
         <h2 class="text-left">BUYERS GUIDE</h2>
         <hr>
         <img src="img/familyImg/fam1.jpg" alt="Buy a Condo" class="img-responsive designImg">
@@ -177,16 +167,10 @@
 
 <!-- About Section -->
 <section id="aboutSection" class="container-fluid">
-    <!-- Contact Button-->
-    <div data-target="#contact1" data-toggle="modal" class="call">
-        <img src="img/icons/call.jpg" alt="Contact" width="70" class="img-responsive">
-        <p>contact</p>
-    </div>
+    <div contact-button></div>
 
     <div class="dmciSection">
-        <div class="dmciLogo">
-            <img src="img/dmci-logo1.jpg" alt="DMCI Logo" class="img-responsive">
-        </div>
+        <div dmci-logo></div>
         <h2 class="text-left">About DMCI</h2>
         <hr>
         <img src="img/condoImg/resort.jpg" alt="Pool" class="img-responsive designImg">
