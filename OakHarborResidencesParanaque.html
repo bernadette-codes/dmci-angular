@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="dmci">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Oak Harbor Residences Paranaque | DMCI Homes | Real Estate Philippines, Condo, House & Lot for Sale</title>
+    <title>Oak Harbor Residences Parañaque | DMCI Homes | Real Estate Philippines, Condo, House & Lot for Sale</title>
     <meta name="description" content="The website of DMCI Homes where you can buy prime house and lots, real estate properties, apartments & condos for sale in the Philippines.">
     <meta name="keywords" content="Oak Harbor, Oakharbor, Paranaque Condo, DMCI, Manila Condo, Philippines, for sale">
     <meta name="author" content="Bernadette Engleman">
     <link rel="shortcut icon" href="../img/icons/favicon.png">
-    <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="http://cdn.bootcss.com/animate.css/3.5.1/animate.min.css">
     <link rel="stylesheet" href="../styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="60">
@@ -35,35 +35,33 @@
     </div>
 </nav>
 
+<!-- Contact Modal-->
+<div id="contact1" class="modal contact fade" role="dialog">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <p class="modal-title">Contact</p>
+            </div>
+            <div class="modal-body">
+                <p class="text-left">
+                    <strong>Landline:</strong>&nbsp; 511-0556, 788-6894<br>
+                    <strong>Globe:</strong>&nbsp; 0927-949-2217<br>
+                    <strong>Sun:</strong>&nbsp; 0933-859-1720
+                </p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
 <!-- Main Section -->
 <section id="mainSection" class="container-fluid">
-    <!-- Contact Button-->
-    <div data-target="#contact1" data-toggle="modal" class="call">
-        <img src="../img/icons/call.jpg" alt="Contact" width="70" class="img-responsive">
-    </div>
-    <div id="contact1" class="modal contact fade" role="dialog">
-        <div class="modal-dialog modal-sm">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <p class="modal-title">Contact</p>
-                </div>
-                <div class="modal-body">
-                    <p class="text-left">
-                        <strong>Landline:</strong>&nbsp; 511-0556, 788-6894<br>
-                        <strong>Globe:</strong>&nbsp; 0927-949-2217<br>
-                        <strong>Sun:</strong>&nbsp; 0933-859-1720</p>
-                </div>
-            </div>
-
-        </div>
-    </div>
+    <div contact-button-prop></div>
 
     <div class="propSection">
-        <div class="dmciLogo">
-            <img src="../img/dmci-logo1.jpg" alt="DMCI Logo" class="img-responsive">
-        </div>
-        <h2 class="text-left">Oak Harbor Residences</h2>
+        <div dmci-logo-prop></div>
+        <h2 class="text-left">Oak Harbor</h2>
         <h3><strong>Address:</strong>&nbsp; Jackson Ave. Asiaworld City, Brgy. Don Galo, Parañaque City</h3>
         <hr>
         <img src="../img/propertiesPhotos/paranaque-oakHarborResidences/promenade.jpg" alt="Oak Harbor Residences" class="condoMainImg img-responsive">
@@ -72,10 +70,7 @@
 
 <!-- Units Section -->
 <section id="unitsSection" class="container-fluid">
-    <!-- Contact Button-->
-    <div data-target="#contact1" data-toggle="modal" class="call">
-        <img src="../img/icons/call.jpg" alt="Contact" width="70" class="img-responsive">
-    </div>
+    <div contact-button-prop></div>
 
     <div class="propSection">
         <h3 class="text-left">Units</h3>
@@ -124,10 +119,7 @@
 
 <!-- Facilities Section -->
 <section id="facilitiesSection" class="container-fluid">
-    <!-- Contact Button-->
-    <div data-target="#contact1" data-toggle="modal" class="call">
-        <img src="../img/icons/call.jpg" alt="Contact" width="70" class="img-responsive">
-    </div>
+    <div contact-button-prop></div>
 
     <div class="propSection">
         <h3 class="text-left">Facilities</h3>
@@ -152,7 +144,7 @@
             </div>
             <div class="col-md-3 col-sm-4 col-xs-6">
                 <img src="../img/propertiesPhotos/paranaque-oakHarborResidences/atrium.jpg" alt="Landscaped Atrium" class="img-responsive" width="200">
-                <h4>Landscaped Atrium</h4>
+                <h4>Atrium</h4>
             </div>
         </div>
         <div id="overlay"></div>
@@ -161,7 +153,7 @@
         </div>
 
         <div class="row text-left otherFacility">
-            <div class="col-xs-6">
+            <div class="col-sm-6 col-xs-12">
                 <h5>Other Facilities:</h5>
                 <ul>
 
@@ -195,7 +187,7 @@
                     <li>WiFi Access</li>
                 </ul>
             </div>
-            <div class="col-xs-6">
+            <div class="col-sm-6 col-xs-12">
                 <h5>Building Features:</h5>
                 <ul>
                     <li>Sky Patio<li>
@@ -221,10 +213,7 @@
 
 <!-- Location Section -->
 <section id="locationSection" class="container-fluid">
-    <!-- Contact Button-->
-    <div data-target="#contact1" data-toggle="modal" class="call">
-        <img src="../img/icons/call.jpg" alt="Contact" width="70" class="img-responsive">
-    </div>
+    <div contact-button-prop></div>
 
     <div class="propSection">
         <h3 class="text-left">Location</h3>
@@ -265,7 +254,7 @@
                 <div class="last row">
                     <div class="col-xs-6">
                         <ul class="text-left">
-                            <li><a href="../locations.html#lasPinasSection">Las Pinas</a></li>
+                            <li><a href="../locations.html#lasPinasSection">Las Piñas</a></li>
                             <li><a href="../locations.html#makatiSection">Makati</a></li>
                             <li><a href="../locations.html#mandaluyongSection">Mandaluyong</a></li>
                             <li><a href="../locations.html#muntinlupaSection">Muntinlupa</a></li>
@@ -274,7 +263,7 @@
                     </div>
                     <div class="col-xs-6">
                         <ul class="rightLoc text-left">
-                            <li><a href="../locations.html#paranaqueSection">Paranaque</a></li>
+                            <li><a href="../locations.html#paranaqueSection">Parañaque</a></li>
                             <li><a href="../locations.html#pasaySection">Pasay</a></li>
                             <li><a href="../locations.html#pasigSection">Pasig</a></li>
                             <li><a href="../locations.html#taguigSection">Taguig</a></li>
@@ -285,7 +274,7 @@
         </div>
     </div>
     <p><small>Copyright © <span id="year"></span>&nbsp; All rights reserved.&nbsp;&nbsp;
-        &nbsp;<span>Designed and created by:&nbsp; <a href="#" target="_blank">Bernadette Engleman</a></span>
+        &nbsp;<span>Designed and created by:&nbsp; <a href="#" target="_blank">Bernadette Engleman&#128279;</a></span>
     </small></p>
 </footer>
 
@@ -309,6 +298,8 @@
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
 <script src="../js/script.js"></script>
+<!-- AngularJS App -->
+<script src="../js/app.js"></script>
 
 </body>
 
