@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="dmci">
 
 <head>
     <meta charset="utf-8">
@@ -10,15 +10,15 @@
     <meta name="keywords" content="Tivoli Garden, Mandaluyong Condo, DMCI, Manila Condo, Philippines, for sale">
     <meta name="author" content="Bernadette Engleman">
     <link rel="shortcut icon" href="../img/icons/favicon.png">
-    <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="http://cdn.bootcss.com/animate.css/3.5.1/animate.min.css">
     <link rel="stylesheet" href="../styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 </head>
 
-<body data-spy="scroll" data-target=".navbar" data-offset="60">
+<body data-spy="scroll" data-target=".navbar" data-offset="60" ng-controller="propLocController as propLoc">
 
 <header id="first-slider">
     <h1>DMCI Homes</h1>
@@ -35,36 +35,34 @@
     </div>
 </nav>
 
+<!-- Contact Modal-->
+<div id="contact1" class="modal contact fade" role="dialog">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <p class="modal-title">Contact</p>
+            </div>
+            <div class="modal-body">
+                <p class="text-left">
+                    <strong>Landline:</strong>&nbsp; 511-0556, 788-6894<br>
+                    <strong>Globe:</strong>&nbsp; 0927-949-2217<br>
+                    <strong>Sun:</strong>&nbsp; 0933-859-1720
+                </p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
 <!-- Main Section -->
 <section id="mainSection" class="container-fluid">
-    <!-- Contact Button-->
-    <div data-target="#contact1" data-toggle="modal" class="call">
-        <img src="../img/icons/call.jpg" alt="Contact" width="70" class="img-responsive">
-    </div>
-    <div id="contact1" class="modal contact fade" role="dialog">
-        <div class="modal-dialog modal-sm">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <p class="modal-title">Contact</p>
-                </div>
-                <div class="modal-body">
-                    <p class="text-left">
-                        <strong>Landline:</strong>&nbsp; 511-0556, 788-6894<br>
-                        <strong>Globe:</strong>&nbsp; 0927-949-2217<br>
-                        <strong>Sun:</strong>&nbsp; 0933-859-1720</p>
-                </div>
-            </div>
-
-        </div>
-    </div>
+    <div contact-button-prop></div>
 
     <div class="propSection">
-        <div class="dmciLogo">
-            <img src="../img/dmci-logo1.jpg" alt="DMCI Logo" class="img-responsive">
-        </div>
-        <h2 class="text-left">Tivoli Garden Residences</h2>
-        <h3><strong>Address:</strong>&nbsp; Coronoado Street, Brgy. Hulo, Mandaluyong City</h3>
+        <div dmci-logo-prop></div>
+        <h2 class="text-left">{{cityLoc[2].readyForOccupancy[2].propName}}</h2>
+        <h3><strong>Address:</strong>&nbsp; {{cityLoc[2].readyForOccupancy[2].address}}</h3>
         <hr>
         <img src="../img/propertiesPhotos/mandaluyong-tivoliGarden/buildings.jpg" alt="Tivoli Garden" class="condoMainImg img-responsive">
     </div>
@@ -72,18 +70,15 @@
 
 <!-- Units Section -->
 <section id="unitsSection" class="container-fluid">
-    <!-- Contact Button-->
-    <div data-target="#contact1" data-toggle="modal" class="call">
-        <img src="../img/icons/call.jpg" alt="Contact" width="70" class="img-responsive">
-    </div>
+    <div contact-button-prop></div>
 
     <div class="propSection">
         <h3 class="text-left">Units</h3>
         <hr>
 
         <div class="row text-center" id="units">
-            <div class="col-lg-6 col-md-12">
-                <img src="../img/propertiesPhotos/mandaluyong-tivoliGarden/units/1-BedroomEnd.jpg" alt="1-Bedroom End" class="img-responsive">
+            <div ng-repeat="ro in propLoc.readyForOccupancy" class="col-lg-6 col-md-12">
+                <img src="{{ro.propName}}" alt="1-Bedroom End" class="img-responsive">
                 <p>Price Range:&nbsp; ₱2,386,000 - ₱2,725,000</p>
             </div>
             <div class="col-lg-6 col-md-12">
@@ -159,10 +154,7 @@
 
 <!-- Facilities Section -->
 <section id="facilitiesSection" class="container-fluid">
-    <!-- Contact Button-->
-    <div data-target="#contact1" data-toggle="modal" class="call">
-        <img src="../img/icons/call.jpg" alt="Contact" width="70" class="img-responsive">
-    </div>
+    <div contact-button-prop></div>
 
     <div class="propSection">
         <h3 class="text-left">Facilities</h3>
@@ -195,7 +187,7 @@
             </div>
             <div class="col-md-3 col-sm-4 col-xs-6">
                 <img src="../img/propertiesPhotos/mandaluyong-tivoliGarden/receptionLobby.jpg" alt="Reception Lobby" class="img-responsive" width="200">
-                <h4>Reception Lobby</h4>
+                <h4>Reception</h4>
             </div>
         </div>
         <div id="overlay"></div>
@@ -204,7 +196,7 @@
         </div>
 
         <div class="row text-left otherFacility">
-            <div class="col-xs-6">
+            <div class="col-sm-6 col-xs-12">
                 <h5>Other Facilities:</h5>
                 <ul>
                     <li>Leisure Pool<li>
@@ -239,7 +231,7 @@
                     <li>Water Station</li>
                 </ul>
             </div>
-            <div class="col-xs-6">
+            <div class="col-sm-6 col-xs-12">
                 <h5>Building Features:</h5>
                 <ul>
                     <li>Sky Patio<li>
@@ -261,10 +253,7 @@
 
 <!-- Location Section -->
 <section id="locationSection" class="container-fluid">
-    <!-- Contact Button-->
-    <div data-target="#contact1" data-toggle="modal" class="call">
-        <img src="../img/icons/call.jpg" alt="Contact" width="70" class="img-responsive">
-    </div>
+    <div contact-button-prop></div>
 
     <div class="propSection">
         <h3 class="text-left">Location</h3>
@@ -305,7 +294,7 @@
                 <div class="last row">
                     <div class="col-xs-6">
                         <ul class="text-left">
-                            <li><a href="../locations.html#lasPinasSection">Las Pinas</a></li>
+                            <li><a href="../locations.html#lasPinasSection">Las Piñas</a></li>
                             <li><a href="../locations.html#makatiSection">Makati</a></li>
                             <li><a href="../locations.html#mandaluyongSection">Mandaluyong</a></li>
                             <li><a href="../locations.html#muntinlupaSection">Muntinlupa</a></li>
@@ -314,7 +303,7 @@
                     </div>
                     <div class="col-xs-6">
                         <ul class="rightLoc text-left">
-                            <li><a href="../locations.html#paranaqueSection">Paranaque</a></li>
+                            <li><a href="../locations.html#paranaqueSection">Parañaque</a></li>
                             <li><a href="../locations.html#pasaySection">Pasay</a></li>
                             <li><a href="../locations.html#pasigSection">Pasig</a></li>
                             <li><a href="../locations.html#taguigSection">Taguig</a></li>
@@ -325,7 +314,7 @@
         </div>
     </div>
     <p><small>Copyright © <span id="year"></span>&nbsp; All rights reserved.&nbsp;&nbsp;
-        &nbsp;<span>Designed and created by:&nbsp; <a href="#" target="_blank">Bernadette Engleman</a></span>
+        &nbsp;<span>Designed and created by:&nbsp; <a href="#" target="_blank">Bernadette Engleman&#128279;</a></span>
     </small></p>
 </footer>
 
@@ -349,6 +338,8 @@
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
 <script src="../js/script.js"></script>
+<!-- AngularJS App -->
+<script src="../js/app.js"></script>
 
 </body>
 
