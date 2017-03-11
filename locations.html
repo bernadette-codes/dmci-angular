@@ -65,29 +65,6 @@
 
         <!-- Accordion -->
         <div class="panel-group accordion">
-            <!-- New Projects -->
-            <div ng-show="propLoc.newProjectsShow" class="panel panel-default">
-                <div class="panel-heading newProp">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#{{propLoc.newProjectscollapse}}">
-                        <h4 class="panel-title">New Projects</h4>
-                    </a>
-                </div>
-                <div id="{{propLoc.newProjectscollapse}}" class="panel-collapse collapse in">
-                    <div class="panel-body text-center">
-                        <div ng-repeat="np in propLoc.newProjects">
-                            <h5>{{np.propName}}</h5>
-                            <div class="propName">
-                                <a target="_blank" href="{{np.link}}">
-                                    <img ng-src="{{np.namePhoto}}" alt="{{np.propName}}" class="img-responsive">
-                                    <img ng-src="{{np.mapPhoto}}" alt="{{np.propName}}" class="img-responsive"><br>
-                                    <p class="infoBtn">More Info</p>
-                                    <p class="text-left">Location:&nbsp; {{np.address}}</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <!-- Under Construction -->
             <div ng-show="propLoc.underConstructionShow" class="panel panel-default">
                 <div class="panel-heading unCons">
@@ -115,7 +92,7 @@
             <div ng-show="propLoc.readyForOccupancyShow" class="panel panel-default">
                 <div class="panel-heading readOc">
                     <a data-toggle="collapse" data-parent="#accordion" href="#{{propLoc.readyForOccupancycollapse}}">
-                        <h4 class="panel-title">Ready Occupancy</h4>
+                        <h4 class="panel-title">Ready for Occupancy</h4>
                     </a>
                 </div>
                 <div id="{{propLoc.readyForOccupancycollapse}}" class="panel-collapse collapse in">
