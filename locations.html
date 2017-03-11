@@ -64,30 +64,30 @@
         <hr>
 
         <!-- Accordion -->
-        <div class="panel-group accordion">
-            <!-- Under Construction -->
-            <div ng-show="propLoc.underConstructionShow" class="panel panel-default">
-                <div class="panel-heading unCons">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#{{propLoc.underConstructioncollapse}}">
-                        <h4 class="panel-title">Under Construction</h4>
+        <div class="panel-group accordion" ng-repeat="list in propLoc.lists">
+            <div ng-show="list.show" class="panel panel-default">
+                <div class="panel-heading {{list.color}}">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#{{list.collapse}}">
+                        <h4 class="panel-title">{{list.title}}</h4>
                     </a>
                 </div>
-                <div id="{{propLoc.underConstructioncollapse}}" class="panel-collapse collapse in">
+                <div id="{{list.collapse}}" class="panel-collapse collapse in">
                     <div class="panel-body text-center">
-                        <div ng-repeat="uc in propLoc.underConstruction">
-                            <h5>{{uc.propName}}</h5>
+                        <div ng-repeat="condoLoc in list.properties">
+                            <h5>{{condoLoc.propName}}</h5>
                             <div class="propName">
-                                <a target="_blank" href="{{uc.link}}">
-                                    <img src="{{uc.namePhoto}}" alt="{{uc.propName}}" class="img-responsive">
-                                    <img src="{{uc.mapPhoto}}" alt="{{uc.propName}}" class="img-responsive"><br>
+                                <a target="_blank" href="{{condoLoc.link}}">
+                                    <img src="{{condoLoc.namePhoto}}" alt="{{condoLoc.propName}}" class="img-responsive">
+                                    <img src="{{condoLoc.mapPhoto}}" alt="{{condoLoc.propName}}" class="img-responsive"><br>
                                     <p class="infoBtn">More Info</p>
-                                    <p class="text-left">Location:&nbsp; {{uc.address}}</p>
+                                    <p class="text-left">Location:&nbsp; {{condoLoc.address}}</p>
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
             <!-- Ready Occupancy -->
             <div ng-show="propLoc.readyForOccupancyShow" class="panel panel-default">
                 <div class="panel-heading readOc">
