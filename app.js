@@ -116,14 +116,14 @@
                 id: 'pasaySection',
                 photo: 'img/locations/pasay.jpg',
                 link: 'locations.html#pasaySection',
-                newProjects: [
+                underConstruction: [
                     {propName: 'Fairway Terraces',
                         link: 'properties/FairwayTerracesPasay.html#mainSection',
                         namePhoto: 'img/propertiesName/pasay-FairwayTerraces.jpg',
                         mapPhoto: 'img/propertiesMap/pasay-FairwayTerraces.jpg',
                         address: 'Villamor Airbase, Pasay City'}],
-                newProjectscollapse: 'collapse1Pasay',
-                newProjectsShow: true,
+                underConstructioncollapse: 'collapse2Pasay',
+                underConstructionShow: true,
                 readyForOccupancy: [
                     {propName: 'La Verti Residences',
                         link: 'properties/LaVertiResidencesPasay.html#mainSection',
@@ -138,15 +138,12 @@
                 id: 'pasigSection',
                 photo: 'img/locations/pasig.jpg',
                 link: 'locations.html#pasigSection',
-                newProjects: [
+                underConstruction: [
                     {propName: 'Brixton Place',
                         link: 'properties/BrixtonPlacePasig.html#mainSection',
                         namePhoto: 'img/propertiesName/pasig-BrixtonPlace.jpg',
                         mapPhoto: 'img/propertiesMap/pasig-BrixtonPlace.jpg',
-                        address: '27 Brixton St., Kapitolyo, Pasig City'}],
-                newProjectscollapse: 'collapse1Pasig',
-                newProjectsShow: true,
-                underConstruction: [
+                        address: '27 Brixton St., Kapitolyo, Pasig City'},
                     {propName: 'Levina Place',
                         link: 'properties/LevinaPlacePasig.html#mainSection',
                         namePhoto: 'img/propertiesName/pasig-LevinaPlace.jpg',
@@ -183,15 +180,12 @@
                 id: 'taguigSection',
                 photo: 'img/locations/taguig.jpg',
                 link: 'locations.html#taguigSection',
-                newProjects: [
+                underConstruction: [
                     {propName: 'Maple Place',
                         link: 'properties/MaplePlaceTaguig.html#mainSection',
                         namePhoto: 'img/propertiesName/taguig-MaplePlace.jpg',
                         mapPhoto: 'img/propertiesMap/taguig-MaplePlace.jpg',
-                        address: 'Acacia Estates, Taguig City'}],
-                newProjectscollapse: 'collapse1Taguig',
-                newProjectsShow: true,
-                underConstruction: [
+                        address: 'Acacia Estates, Taguig City'},
                     {propName: 'Ivory Wood',
                         link: 'properties/IvoryWoodTaguig.html#mainSection',
                         namePhoto: 'img/propertiesName/taguig-Ivorywood.jpg',
