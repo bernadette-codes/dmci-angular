@@ -74,7 +74,7 @@
                 id: 'paranaqueSection',
                 photo: 'img/locations/paranaque.jpg',
                 link: 'locations.html#paranaqueSection',
-                newProjects: [
+                underConstruction: [
                     {propName: 'Calathea Place',
                         link: 'properties/CalatheaPlaceParanaque.html#mainSection',
                         namePhoto: 'img/propertiesName/paranaque-CalatheaPlace.jpg',
@@ -84,10 +84,7 @@
                         link: 'properties/OakHarborResidencesParanaque.html#mainSection',
                         namePhoto: 'img/propertiesName/paranaque-OakHarbor.jpg',
                         mapPhoto: 'img/propertiesMap/paranaque-OakHarborResidences.jpg',
-                        address: 'Jackson Ave. Asiaworld City, Brgy. Don Galo, Parañaque City'}],
-                newProjectscollapse: 'collapse1Paranaque',
-                newProjectsShow: true,
-                underConstruction: [
+                        address: 'Jackson Ave. Asiaworld City, Brgy. Don Galo, Parañaque City'},
                     {propName: 'Asteria Residences',
                         link: 'properties/AsteriaResidencesParanaque.html#mainSection',
                         namePhoto: 'img/propertiesName/paranaque-AsteriaResidences.jpg',
