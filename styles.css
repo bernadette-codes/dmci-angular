@@ -490,10 +490,6 @@ footer span a:focus {
     font-size: 18px;
 }
 
-.panel-heading.newProp {
-    background-color: #e69138;
-}
-
 .panel-heading.unCons {
     background-color: rgba(8,170,87,0.7);
 }
