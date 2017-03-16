@@ -98,11 +98,11 @@ nav.affix {
 }
 
 #first-slider .slide1 {
-    background-image: url(img/landingPage/sienaPark2-paranaque.jpg);
+    background-image: url(../img/landingPage/sienaPark2-paranaque.jpg);
 }
 
 #first-slider .slide2 {
-    background-image: url(img/landingPage/cedarCrest-taguig.jpg);
+    background-image: url(../img/landingPage/cedarCrest-taguig.jpg);
 }
 
 /** Landing Page **/
@@ -343,7 +343,7 @@ section h2,
 .propSection h2,
 #unitsSection h3,
 #facilitiesSection h3 {
-    background: url(img/icons/condoLogo.png) 0 3px/50px no-repeat padding-box;
+    background: url(../img/icons/condoLogo.png) 0 3px/50px no-repeat padding-box;
 }
 
 .propSection a {
@@ -362,7 +362,7 @@ section h2,
 
 /* Buyer's Guide */
 .guideSection h2 {
-    background: url(img/icons/listLogo.png) 10px 15px/25px no-repeat padding-box;
+    background: url(../img/icons/listLogo.png) 10px 15px/25px no-repeat padding-box;
 }
 
 .info h3 {
@@ -376,7 +376,7 @@ section h2,
 
 .moreInfo a {
     display: block;
-    background: url(img/icons/listLogo.png) 10px 12px/15px no-repeat padding-box;
+    background: url(../img/icons/listLogo.png) 10px 12px/15px no-repeat padding-box;
     font-size: 18px;
     font-weight: 600;
     text-align: left;
@@ -420,7 +420,7 @@ div.info,
 
 /* About */
 .dmciSection h2 {
-    background: url(img/icons/about.png) 10px 15px/25px no-repeat padding-box;
+    background: url(../img/icons/about.png) 10px 15px/25px no-repeat padding-box;
 }
 
 /* Footer */
@@ -470,7 +470,7 @@ footer span a:focus {
 /***** Locations Page *****/
 .cityProp h2,
 #locationSection h3 {
-    background: url(img/icons/locationIcon.png) 10px 5px/25px no-repeat padding-box;
+    background: url(../img/icons/locationIcon.png) 10px 5px/25px no-repeat padding-box;
     padding-left: 40px;
     margin: 20px;
 }
@@ -861,7 +861,7 @@ section#locationSection {
         font-size: 15px;
     }
     .moreInfo a {
-        background: url(img/icons/listLogo.png) 10px 10px/12px no-repeat padding-box;
+        background: url(../img/icons/listLogo.png) 10px 10px/12px no-repeat padding-box;
         margin-left: 0;
         padding-left: 30px;
     }
@@ -881,17 +881,17 @@ section#locationSection {
     .propSection h2,
     #unitsSection h3,
     #facilitiesSection h3 {
-        background: url(img/icons/condoLogo.png) 0 5px/40px no-repeat padding-box;
+        background: url(../img/icons/condoLogo.png) 0 5px/40px no-repeat padding-box;
     }
     .guideSection h2 {
-        background: url(img/icons/listLogo.png) 10px 15px/20px no-repeat padding-box;
+        background: url(../img/icons/listLogo.png) 10px 15px/20px no-repeat padding-box;
     }
     .dmciSection h2 {
-        background: url(img/icons/about.png) 10px 15px/20px no-repeat padding-box;
+        background: url(../img/icons/about.png) 10px 15px/20px no-repeat padding-box;
     }
     .cityProp h2,
     #locationSection h3 {
-        background: url(img/icons/locationIcon.png) 10px 5px/20px no-repeat padding-box;
+        background: url(../img/icons/locationIcon.png) 10px 5px/20px no-repeat padding-box;
         padding-left: 35px;
         margin-left: 5px;
     }
