@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="http://cdn.bootcss.com/animate.css/3.5.1/animate.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 </head>
 
@@ -126,7 +126,7 @@
                     To facilitate the documentation process and to complete your unit’s reservation transaction, you must submit the following documents to your Sales Agent:
                 </p>
                 <ul>
-                    <li ng-repeat="buyersGuide in cashRequirement">{{buyersGuide.req}}</li>
+                    <li ng-repeat="buyersGuide in cashRequirement">{{buyersGuide}}</li>
                 </ul>
                 <p>Once all requirements have been submitted, your Sales Agent shall endorse your documents and all other necessary requirements to the Documents and Inventory Control Department for the preparation of the Deed of Absolute Sale (DOAS).</p>
                 <p>All requirements and payments must be completed within thirty (30) days.</p>
@@ -138,26 +138,12 @@
                 <img src="img/familyImg/family2.jpg" alt="Buy a Condo" class="img-responsive designImg">
                 <p>For direct bank financing, a duly accomplished loan application form with the following pre-approval requirements must be submitted to your Sales Agents,
                     preferred accredited bank, or DMCI Homes Bank Financing Helpdesk four (4) months before the due date of the bank financing schedule for processing of your bank loan approval: </p>
-                <p class="client">IF EMPLOYED WITHIN THE PHILIPPINES</p>
-                <ul>
-                    <li ng-repeat="buyersGuide in employedLocally">{{buyersGuide.req}}</li>
-                </ul>
-                <p class="client">IF OVERSEAS FILIPINO WORKER (OFW) </p>
-                <ul>
-                    <li ng-repeat="buyersGuide in ofw">{{buyersGuide.req}}</li>
-                </ul>
-                <p class="client">IF SELF-EMPLOYED</p>
-                <ul>
-                    <li ng-repeat="buyersGuide in selfEmployed">{{buyersGuide.req}}</li>
-                </ul>
-                <p class="client">IF PRACTICING DOCTOR</p>
-                <ul>
-                    <li ng-repeat="buyersGuide in doctor">{{buyersGuide.req}}</li>
-                </ul>
-                <p class="client">IF INCOME IS FROM RENTAL OF PROPERTIES</p>
-                <ul>
-                    <li ng-repeat="buyersGuide in landlord">{{buyersGuide.req}}</li>
-                </ul>
+                <div ng-repeat="buyersGuide in bankFinancing">
+                    <p class="client">{{buyersGuide.type}}</p>
+                    <ul>
+                        <li ng-repeat="req in buyersGuide.requirements">{{req}}</li>
+                    </ul>
+                </div>
                 <p>When approved by your bank, you will be issued a Letter of Guaranty (LOG) which must be submitted to the Financing Department.</p>
                 <p>All requirements and payments must be completed within thirty (30) days.</p>
             </div>
@@ -240,7 +226,7 @@
         </div>
     </div>
     <p><small>Copyright © <span id="year"></span>&nbsp; All rights reserved.&nbsp;&nbsp;
-        &nbsp;<span>Designed and created by:&nbsp; <a href="#" target="_blank">Bernadette Engleman&#128279;</a></span>
+        &nbsp;<span>Designed and created by:&nbsp; <a href="http://www.bernadetteengleman.com/" target="_blank">Bernadette Engleman&#128279;</a></span>
     </small></p>
 </footer>
 
@@ -249,5 +235,8 @@
 <script src="js/script.js"></script>
 <!-- AngularJS App -->
 <script src="js/app.js"></script>
+<script src="js/template.js"></script>
 
 </body>
+
+</html>
