@@ -18,7 +18,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 </head>
 
-<body data-spy="scroll" data-target=".navbar" data-offset="60" ng-controller="propLocController as propLoc">
+<body data-spy="scroll" data-target=".navbar" data-offset="60" ng-controller="PropLocController as propLoc">
 
 <header id="first-slider">
     <h1>DMCI Homes</h1>
@@ -35,112 +35,50 @@
     </div>
 </nav>
 
-<!-- Contact Modal-->
-<div id="contact1" class="modal contact fade" role="dialog">
-    <div class="modal-dialog modal-sm">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <p class="modal-title">Contact</p>
-            </div>
-            <div class="modal-body">
-                <p class="text-left">
-                    <strong>Landline:</strong>&nbsp; 511-0556, 788-6894<br>
-                    <strong>Globe:</strong>&nbsp; 0927-949-2217<br>
-                    <strong>Sun:</strong>&nbsp; 0933-859-1720
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
+<contact-modal></contact-modal>
 
 <!-- Properties by Cities-->
-<section ng-repeat="propLoc in cityLoc" id="{{propLoc.id}}" class="container-fluid">
-    <div contact-button></div>
+<div ng-repeat="propLoc in cityLoc">
+    <section id="{{propLoc.id}}" class="container-fluid">
+        <div contact-button></div>
 
-    <div class="cityProp">
-        <div dmci-logo></div>
-        <h2 class="text-left">{{propLoc.cityName}} Condo</h2>
-        <hr>
+        <div class="cityProp">
+            <div dmci-logo></div>
+            <h2 class="text-left">{{propLoc.cityName}} Condo</h2>
+            <hr>
 
-        <!-- Accordion -->
-        <div class="panel-group accordion" ng-repeat="list in propLoc.lists">
-            <div ng-show="list.show" class="panel panel-default">
-                <div class="panel-heading {{list.color}}">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#{{list.collapse}}">
-                        <h4 class="panel-title">{{list.title}}</h4>
-                    </a>
-                </div>
-                <div id="{{list.collapse}}" class="panel-collapse collapse in">
-                    <div class="panel-body text-center">
-                        <div ng-repeat="condoLoc in list.properties">
-                            <h5>{{condoLoc.propName}}</h5>
-                            <div class="propName">
-                                <a target="_blank" href="{{condoLoc.link}}">
-                                    <img ng-src="{{condoLoc.namePhoto}}" alt="{{condoLoc.propName}}" class="img-responsive">
-                                    <img ng-src="{{condoLoc.mapPhoto}}" alt="{{condoLoc.propName}}" class="img-responsive"><br>
-                                    <p class="infoBtn">More Info</p>
-                                    <p class="text-left">Location:&nbsp; {{condoLoc.address}}</p>
-                                </a>
+            <!-- Accordion -->
+            <div class="panel-group accordion" ng-repeat="list in propLoc.lists">
+                <div ng-show="list.show" class="panel panel-default">
+                    <div class="panel-heading {{list.color}}">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#{{list.collapse}}">
+                            <h4 class="panel-title">{{list.title}}</h4>
+                        </a>
+                    </div>
+                    <div id="{{list.collapse}}" class="panel-collapse collapse in">
+                        <div class="panel-body text-center">
+                            <div ng-repeat="condoLoc in list.properties">
+                                <h5>{{condoLoc.propName}}</h5>
+                                <div class="propName">
+                                    <a target="_blank" href="{{condoLoc.link}}">
+                                        <img ng-src="{{condoLoc.namePhoto}}" alt="{{condoLoc.propName}}" class="img-responsive">
+                                        <img ng-src="{{condoLoc.mapPhoto}}" alt="{{condoLoc.propName}}" class="img-responsive"><br>
+                                        <p class="infoBtn">More Info</p>
+                                        <p class="text-left">Location:&nbsp; {{condoLoc.address}}</p>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+</div>
 
 <!-- Footer -->
 <footer class="container-fluid text-center">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 col-sm-4 col-xs-12">
-                <h2 class="invisible">DMCI</h2>
-                <img src="img/dmci-logo.jpg" alt="DMCI Homes" class="img-responsive">
-                <h3>Head Office</h3>
-                <address>
-                    <strong>DMCI Homes Corporate Center </strong><br>
-                    1321 Apolinario St.<br>
-                    Bangkal, Makati City
-                </address>
-            </div>
-
-            <div class="col-md-4 col-sm-4 col-xs-12">
-                <h2>Contact</h2>
-                <p class="text-left">For More Info and Tripping,<br>
-                    <strong>Contact:</strong>&nbsp; Lorna C. Estacio<br>
-                    <small>Real Estate Broker License No. 26579</small><br>
-                    <strong>Landline:</strong>&nbsp; 511-0556, 788-6894<br>
-                    <strong>Globe:</strong>&nbsp; 0927-949-2217<br>
-                    <strong>Sun:</strong>&nbsp; 0933-859-1720<br>
-                    <strong>Email:</strong>&nbsp; lcestacio1@gmail.com</p>
-            </div>
-
-            <div class="col-md-4 col-sm-4 col-xs-12">
-                <h2>Locations</h2>
-                <div class="last row">
-                    <div class="col-xs-6">
-                        <ul class="text-left">
-                            <li><a href="#lasPinasSection">Las Piñas</a></li>
-                            <li><a href="#makatiSection">Makati</a></li>
-                            <li><a href="#mandaluyongSection">Mandaluyong</a></li>
-                            <li><a href="#muntinlupaSection">Muntinlupa</a></li>
-
-                        </ul>
-                    </div>
-                    <div class="col-xs-6">
-                        <ul class="rightLoc text-left">
-                            <li><a href="#paranaqueSection">Parañaque</a></li>
-                            <li><a href="#pasaySection">Pasay</a></li>
-                            <li><a href="#pasigSection">Pasig</a></li>
-                            <li><a href="#taguigSection">Taguig</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <footer-main></footer-main>
     <p><small>Copyright © <span id="year"></span>&nbsp; All rights reserved.&nbsp;&nbsp;
         &nbsp;<span>Designed and created by:&nbsp; <a href="http://www.bernadetteengleman.com/" target="_blank">Bernadette Engleman&#128279;</a></span>
     </small></p>
