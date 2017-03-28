@@ -65,7 +65,7 @@
         <div dmci-logo></div>
         <h2 class="text-left">PROPERTIES</h2>
         <hr>
-        <div ng-controller="propLocController as propLoc" class="row text-center mainPage">
+        <div ng-controller="PropLocController as propLoc" class="row text-center mainPage">
             <div ng-repeat="propLoc in cityLoc" class="col-md-3 col-sm-4 col-xs-6">
                 <a href="{{propLoc.link}}">
                     <img ng-src="{{propLoc.photo}}" alt="{{propLoc.cityName}}" class="img-responsive" width="200" height="180">
@@ -80,7 +80,7 @@
 <section id="buyersGuideSection" class="container-fluid">
     <div contact-button></div>
 
-    <div ng-controller="buyersGuideController as buyersGuide" class="guideSection">
+    <div ng-controller="BuyersGuideController as buyersGuide" class="guideSection">
         <div dmci-logo></div>
         <h2 class="text-left">BUYERS GUIDE</h2>
         <hr>
@@ -145,7 +145,7 @@
         <img src="img/condoImg/resort.jpg" alt="Pool" class="img-responsive designImg">
         <img src="img/condoImg/playarea.jpg" alt="Play Area" class="img-responsive designImg">
         <img src="img/condoImg/gym.jpg" alt="Play Area" class="img-responsive designImg">
-        <div ng-controller="aboutController as about">
+        <div ng-controller="AboutController as about">
             <div ng-repeat="about in features" class="info">
                 <h3>{{about.feature}}</h3>
                 <p>{{about.description}}</p>
@@ -157,8 +157,13 @@
     </div>
 </section>
 
-<footer-main></footer-main>
-
+<!-- Footer -->
+<footer class="container-fluid text-center">
+    <footer-main></footer-main>
+    <p><small>Copyright © <span id="year"></span>&nbsp; All rights reserved.&nbsp;&nbsp;
+        &nbsp;<span>Designed and created by:&nbsp; <a href="http://www.bernadetteengleman.com/" target="_blank">Bernadette Engleman&#128279;</a></span>
+    </small></p>
+</footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
