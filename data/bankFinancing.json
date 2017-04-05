@@ -1,0 +1,16 @@
+[{
+  "type": "IF EMPLOYED WITHIN THE PHILIPPINES",
+  "requirements": ["Certificate of Employment (COE) stating annual salary and position", "Latest Income Tax Return (ITR)", "Pay Slips (past 2 months)", "Proof of Billing Address (must be the latest billing statement)", "Bank Statements"]
+}, {
+  "type": "IF OVERSEAS FILIPINO WORKER (OFW)",
+  "requirements": ["POEA Authenticated Contract (seaman)", "COE Authenticated by Philippine Consulate (direct hired)"]
+}, {
+  "type": "IF SELF-EMPLOYED",
+  "requirements": ["Business Name (DTI-Certified) or SEC Registration", "Articles of Incorporation and By-laws with SEC Registration Certificates", "List of Trade References (at least 3 names and contact numbers of major suppliers and/or customers)", "Audited Financial Statements for the past two (2) years", "Bank Statements for the past six (6) months", "Proof of Billing Address (must be the latest billing statement)"]
+}, {
+  "type": "IF PRACTICING DOCTOR",
+  "requirements": ["Clinic address/es and schedule", "Bank Statements for the past six (6) months"]
+}, {
+  "type": "IF INCOME IS FROM RENTAL OF PROPERTIES",
+  "requirements": ["List of tenants and rental amount", "Complete address/es of properties being rented", "Bank Statements for the past six (6) months"]
+}]
