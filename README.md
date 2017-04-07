@@ -2,7 +2,7 @@
 **DMCI Homes**
 --------------------
 
-[DMCI Homes](http://www.dmcicondomanila.com/) is a responsive 28-webpage Real Estate website featuring 26 properties created for a client.
+[DMCI Homes](http://www.dmcicondomanila.com/) is a responsive Real Estate website featuring 26 properties created for a client.
 
 ![DMCI Homes Landing Page](http://www.bernadetteengleman.com/img/portfolio/dmcithumbnail.jpg)
 
