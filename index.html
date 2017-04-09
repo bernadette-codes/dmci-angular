@@ -18,7 +18,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 </head>
 
-<body data-spy="scroll" data-target=".navbar" data-offset="60">
+<body data-spy="scroll" data-target=".navbar" data-offset="60" ng-controller="PropLocController as propLoc">
 
 <!-- Landing Section -->
 <header id="first-slider">
@@ -65,7 +65,7 @@
         <div dmci-logo></div>
         <h2 class="text-left">PROPERTIES</h2>
         <hr>
-        <div ng-controller="PropLocController as propLoc" class="row text-center mainPage">
+        <div class="row text-center mainPage">
             <div ng-repeat="propLoc in cityLoc" class="col-md-3 col-sm-4 col-xs-6">
                 <a href="{{propLoc.link}}">
                     <img ng-src="{{propLoc.photo}}" alt="{{propLoc.cityName}}" class="img-responsive" width="200" height="180">
@@ -75,6 +75,45 @@
         </div>
     </div>
 </section>
+
+<!-- Properties by Cities-->
+<div ng-repeat="propLoc in cityLoc">
+    <section id="{{propLoc.id}}" class="container-fluid">
+        <div contact-button></div>
+
+        <div class="cityProp">
+            <div dmci-logo></div>
+            <h2 class="text-left">{{propLoc.cityName}} Condo</h2>
+            <hr>
+
+            <!-- Accordion -->
+            <div class="panel-group accordion" ng-repeat="list in propLoc.lists">
+                <div ng-show="list.show" class="panel panel-default">
+                    <div class="panel-heading {{list.color}}">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#{{list.collapse}}">
+                            <h4 class="panel-title">{{list.title}}</h4>
+                        </a>
+                    </div>
+                    <div id="{{list.collapse}}" class="panel-collapse collapse in">
+                        <div class="panel-body text-center">
+                            <div ng-repeat="condoLoc in list.properties">
+                                <h5>{{condoLoc.propName}}</h5>
+                                <div class="propName">
+                                    <a target="_blank" href="{{condoLoc.link}}">
+                                        <img ng-src="{{condoLoc.namePhoto}}" alt="{{condoLoc.propName}}" class="img-responsive">
+                                        <img ng-src="{{condoLoc.mapPhoto}}" alt="{{condoLoc.propName}}" class="img-responsive"><br>
+                                        <p class="infoBtn">More Info</p>
+                                        <p class="text-left">Location:&nbsp; {{condoLoc.address}}</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
 
 <!-- Buyers Guide Section -->
 <section id="buyersGuideSection" class="container-fluid">
