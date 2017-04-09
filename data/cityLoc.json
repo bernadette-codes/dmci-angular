@@ -1,8 +1,9 @@
-[{
+[
+  {
   "cityName": "Las Piñas",
   "id": "lasPinasSection",
   "photo": "img/locations/lasPinas.jpg",
-  "link": "locations.html#lasPinasSection",
+  "link": "#lasPinasSection",
   "lists": [{
     "show": false
   }, {
@@ -18,11 +19,12 @@
     "color": "readOc",
     "show": true
   }]
-}, {
+},
+  {
   "cityName": "Makati",
   "id": "makatiSection",
   "photo": "img/locations/makati.jpg",
-  "link": "locations.html#makatiSection",
+  "link": "#makatiSection",
   "lists": [{
     "title": "Under Construction",
     "properties": [{
@@ -38,14 +40,17 @@
   }, {
     "show": false
   }]
-}, {
+},
+  {
   "cityName": "Mandaluyong",
   "id": "mandaluyongSection",
   "photo": "img/locations/mandaluyong.jpg",
-  "link": "locations.html#mandaluyongSection",
-  "lists": [{
+  "link": "#mandaluyongSection",
+  "lists": [
+    {
     "show": false
-  }, {
+    },
+    {
     "title": "Ready for Occupancy",
     "properties": [{
       "propName": "Dansalan Gardens",
@@ -69,12 +74,13 @@
     "collapse": "collapseMandaluyong",
     "color": "readOc",
     "show": true
-  }]
-}, {
+    }]
+},
+  {
   "cityName": "Muntinlupa",
   "id": "muntinlupaSection",
   "photo": "img/locations/muntinlupa.jpg",
-  "link": "locations.html#muntinlupaSection",
+  "link": "#muntinlupaSection",
   "lists": [{
     "show": false
   }, {
@@ -90,11 +96,12 @@
     "color": "readOc",
     "show": true
   }]
-}, {
+},
+  {
   "cityName": "Parañaque",
   "id": "paranaqueSection",
   "photo": "img/locations/paranaque.jpg",
-  "link": "locations.html#paranaqueSection",
+  "link": "#paranaqueSection",
   "lists": [{
     "title": "Under Construction",
     "properties": [{
@@ -144,11 +151,12 @@
     "color": "readOc",
     "show": true
   }]
-}, {
+},
+  {
   "cityName": "Pasay",
   "id": "pasaySection",
   "photo": "img/locations/pasay.jpg",
-  "link": "locations.html#pasaySection",
+  "link": "#pasaySection",
   "lists": [{
     "title": "Under Construction",
     "properties": [{
@@ -174,11 +182,12 @@
     "color": "readOc",
     "show": true
   }]
-}, {
+},
+  {
   "cityName": "Pasig",
   "id": "pasigSection",
   "photo": "img/locations/pasig.jpg",
-  "link": "locations.html#pasigSection",
+  "link": "#pasigSection",
   "lists": [{
     "title": "Under Construction",
     "properties": [{
@@ -228,11 +237,12 @@
     "color": "readOc",
     "show": true
   }]
-}, {
+},
+  {
   "cityName": "Taguig",
   "id": "taguigSection",
   "photo": "img/locations/taguig.jpg",
-  "link": "locations.html#taguigSection",
+  "link": "#taguigSection",
   "lists": [{
     "title": "Under Construction",
     "properties": [{
