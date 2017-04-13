@@ -18,6 +18,7 @@
 
  - AngularJS
  - JavaScript
+ - jQuery 
  - Bootstrap
  - Sass
  - CSS3
