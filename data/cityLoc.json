@@ -215,6 +215,12 @@
       "mapPhoto": "img/propertiesMap/pasig-MireaResidences.jpg",
       "address": "Amang Rodriquez Ave., Brgy Santolan, Pasig Cit"
     }, {
+      "propName": "Prisma Residences",
+      "link": "properties/PrismaResidencesPasig.html#mainSection",
+      "namePhoto": "img/propertiesName/pasig-PrismaResidences.jpg",
+      "mapPhoto": "img/propertiesMap/pasig-PrismaResidences.jpg",
+      "address": "Pasig Boulevard, Brgy. Bagong Ilog, 1600"
+    }, {
       "propName": "Sheridan Towers",
       "link": "properties/SheridanTowersPasig.html#mainSection",
       "namePhoto": "img/propertiesName/pasig-SheridanTowers.jpg",
