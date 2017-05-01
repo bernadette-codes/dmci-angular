@@ -547,7 +547,7 @@ footer {
             margin-left: -40px; } }
     @media screen and (max-width: 992px) {
       footer .row .last.row {
-        margin-left: 15px -50; } }
+        margin-left: -35px; } }
     @media screen and (max-width: 767px) {
       footer .row .last.row {
         margin-left: 70px; } }
@@ -584,7 +584,6 @@ footer {
 
 /***** Property Pages *****/
 #mainSection .propSection h3 {
-  margin-right: 20px;
   background-color: #ffffff;
   color: #191919;
   font-size: 18px;
@@ -592,8 +591,13 @@ footer {
   margin: 0 0 10px 40px; }
 
 #mainSection .propSection .condoMainImg {
-  padding-top: 35px;
-  padding-bottom: 35px; }
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+  #mainSection .propSection .condoMainImg img {
+    width: 100%;
+    padding-top: 35px;
+    padding-bottom: 35px; }
 
 #unitsSection {
   margin-top: -90px; }
@@ -608,7 +612,6 @@ footer {
       margin-top: -10px; } }
   #unitsSection h3 {
     background: url(../img/icons/condoLogo.png) 0 3px/50px no-repeat padding-box;
-    margin: 10px 10px 10px 30px;
     background-color: #ffffff;
     color: #01216C;
     font-size: 30px;
@@ -667,7 +670,6 @@ footer {
       margin-top: -10px; } }
   #facilitiesSection h3 {
     background: url(../img/icons/condoLogo.png) 0 3px/50px no-repeat padding-box;
-    margin: 10px 10px 10px 30px;
     background-color: #ffffff;
     color: #01216C;
     font-size: 30px;
@@ -731,7 +733,6 @@ footer {
     #locationSection {
       margin-top: -10px; } }
   #locationSection h3 {
-    margin: 10px 10px 10px 30px;
     background: url(../img/icons/locationIcon.png) 10px 5px/25px no-repeat padding-box;
     padding-left: 40px;
     margin: 20px;
@@ -743,7 +744,6 @@ footer {
       #locationSection h3 {
         background: url(../img/icons/locationIcon.png) 10px 5px/20px no-repeat padding-box;
         padding-left: 35px;
-        margin-left: 5px;
         font-size: 25px;
         margin-left: 0; } }
   #locationSection #map {
