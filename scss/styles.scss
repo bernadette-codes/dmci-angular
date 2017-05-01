@@ -580,7 +580,7 @@ section h2 {
     .info {
         @include info;
     } //.info
-    
+
     h3 {
         @include subSecTitleStyle;
     }
@@ -639,7 +639,7 @@ footer {
 
         .last.row {
           @include respond-to(992px) {
-            margin-left: $footerMargin -50;
+            margin-left: $footerMargin - 50;
           }
           @include respond-to(767px) {
             margin-left: $footerMargin + 55;
@@ -685,19 +685,25 @@ footer {
 /***** Property Pages *****/
 #mainSection .propSection {
   h3 {
-      margin-right: 20px;
-      background-color: $white;
-      color: #191919;
-      font-size: 18px;
-      line-height: 26px;
-      margin: 0 0 10px 40px;
+    background-color: $white;
+    color: #191919;
+    font-size: 18px;
+    line-height: 26px;
+    margin: 0 0 10px 40px;
   }
   .condoMainImg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    img {
+      width: 100%;
       padding: {
         top: 35px;
         bottom: 35px;
       }
-  }
+    }
+  } //.condoMainImg
 } //#mainSection .propSection
 
 #unitsSection {
@@ -714,9 +720,8 @@ footer {
 
     h3 {
       background: url(../img/icons/condoLogo.png) 0 3px/50px $bgImg;
-      margin: $subSecMargin;
-      @include sectionTitles;
-      @include sectionTitleSpace;
+      @include sectionTitles; //margin-left: 10px;
+      @include sectionTitleSpace; //margin: 20px;
       @include respond-to(400px) {
         background: url(../img/icons/condoLogo.png) 0 5px/40px $bgImg;
         font-size: 25px;
@@ -772,7 +777,6 @@ footer {
 
     h3 {
       background: url(../img/icons/condoLogo.png) 0 3px/50px $bgImg;
-      margin: $subSecMargin;
       @include sectionTitles;
       @include sectionTitleSpace;
       @include respond-to(400px) {
@@ -847,13 +851,11 @@ footer {
     }
 
     h3 {
-    margin: $subSecMargin;
       @include locationIcon;
       @include sectionTitles;
       @include respond-to(400px) {
         background: url(../img/icons/locationIcon.png) 10px 5px/20px $bgImg;
         padding-left: 35px;
-        margin-left: 5px;
         font-size: 25px;
         margin-left: 0;
         }
