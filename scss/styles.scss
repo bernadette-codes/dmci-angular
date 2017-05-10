@@ -10,6 +10,10 @@ body {
     line-height: 1.8;
 }
 
+h1#seo {
+  @include seoKeyword;
+}
+
 /** Landing Page Slides backgrounds **/
 #first-slider .slide1,
 #first-slider .slide2 {
@@ -38,10 +42,6 @@ body {
     font: {
       family: 'Quicksand', sans-serif;
       weight: 700;
-    }
-
-    h1 {
-        @include seoKeyword;
     }
 
     p {
@@ -290,16 +290,18 @@ section h2 {
 } //.dmciLogo
 
 /***** Cities Section *****/
+#propertiesSection {
+  h2 {
+    background: url(../img/icons/condoLogo.png) 0 3px/50px $bgImg;
+    @include sectionTitleSpace;
+    @include respond-to(400px) {
+      background: url(../img/icons/condoLogo.png) 0 5px/40px $bgImg;
+    }
+  }
+}
+
 .propSection {
     @include sectionTitleStyle;
-
-    h2 {
-      background: url(../img/icons/condoLogo.png) 0 3px/50px $bgImg;
-      @include sectionTitleSpace;
-      @include respond-to(400px) {
-        background: url(../img/icons/condoLogo.png) 0 5px/40px $bgImg;
-      }
-    }
 
     .row {
         @include sectionSpace;
@@ -339,6 +341,11 @@ section h2 {
         }
     } //.propSection a
 } //.propSection
+
+.mainPage img {
+  display: block;
+  width: 100%;
+}
 
 /***** City Properties *****/
 .cityProp {
@@ -684,13 +691,42 @@ footer {
 
 /***** Property Pages *****/
 #mainSection .propSection {
-  h3 {
+  h1 {
+    background: url(../img/icons/condoLogo.png) 0 3px/50px $bgImg;
+    @include sectionTitles;
+    @include sectionTitleSpace;
+    @include respond-to(400px) {
+      background: url(../img/icons/condoLogo.png) 0 5px/40px $bgImg;
+      font-size: 25px;
+      margin-left: 0;
+    }
+  }
+
+  h2 {
     background-color: $white;
     color: #191919;
     font-size: 18px;
     line-height: 26px;
-    margin: 0 0 10px 40px;
-  }
+    margin: 0 0 10px 0;
+    padding: {
+      top: 7px;
+      bottom: 7px;
+      left: 40px;
+    }
+    @include respond-to(550px) {
+      font-size: $propSecH3;
+    }
+    @include respond-to(450px) {
+      font-size: $propSecH3 - 3;
+    }
+    @include respond-to(400px) {
+      font-size: $propSecH3 - 5;
+    }
+    @include respond-to(350px) {
+      font-size: $propSecH3 - 6;
+    }
+  } //h2
+
   .condoMainImg {
     display: block;
     margin-left: auto;
@@ -728,6 +764,11 @@ footer {
         margin-left: 0;
       }
     } //h3
+
+    #units img {
+        display: block;
+        width: 100%;
+    }
 
     #units p {
       @include propPageImgDesc;
